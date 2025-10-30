@@ -1,0 +1,109 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Thanh navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  padding: 12px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fdc215;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #0077cc;
+}
+
+/* Góc phải tài khoản */
+.account {
+  font-size: 15px;
+  color: #555;
+}
+
+.account i {
+  margin-right: 6px;
+  color: #0077cc;
+}
+
+.account a {
+  text-decoration: none;
+  color: #0077cc;
+  margin: 0 4px;
+  font-weight: 500;
+}
+
+.account a:hover {
+  text-decoration: underline;
+}
+
+/* Nội dung chính */
+.intro {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom right, #e8f1ff, #ffffff);
+}
+
+.intro h1 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 15px 0;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
