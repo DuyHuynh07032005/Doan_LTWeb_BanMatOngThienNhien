@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GiuseBee - Trang chủ</title>
+  <title>HONEY BEE - Trang chủ</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- Thanh điều hướng -->
   <header>
     <nav class="navbar">
-      <div class="logo">HONEY BEE</div>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo HONEY BEE">
+        <span class="logo-text">HONEY <span class="bee-text">BEE</span></span>
+      </div>
 
       <ul class="menu">
-        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#" class="active">Trang chủ</a></li>
         <li><a href="#">Giới thiệu</a></li>
         <li><a href="#">Sản phẩm</a></li>
         <li><a href="#">Liên hệ</a></li>
@@ -27,16 +31,81 @@
     </nav>
   </header>
 
+  <!-- Banner -->
+  <section class="banner">
+    <img src="images/banner.jpg" alt="Banner HONEY BEE">
+    <div class="banner-text">
+      <h2>Thiên nhiên ban tặng</h2>
+      <h1>MẬT ONG NGUYÊN CHẤT</h1>
+    </div>
+  </section>
+
   <!-- Nội dung chính -->
   <main class="intro">
     <h1>Chào mừng đến với HONEY BEE</h1>
     <p>🌿 Mật Ong Nguyên Chất – Chất lượng cao, nguồn gốc hoàn toàn tự nhiên!</p>
-    <a href="#" class="btn">Khám phá ngay</a>
+    <a href="#best-sellers" class="btn">Sản phẩm bán chạy của chúng tôi</a>
   </main>
+
+  <!-- Sản phẩm bán chạy (placeholder) -->
+  <section id="best-sellers" class="products">
+    <div class="container">
+      <h2>Sản phẩm bán chạy</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="images/prod1.jpg" alt="Sản phẩm 1">
+          <h3>Mật ong rừng</h3>
+          <p class="price">200.000đ</p>
+          <a href="#" class="buy-btn">Mua ngay</a>
+        </article>
+
+        <article class="product-card">
+          <img src="images/prod2.jpg" alt="Sản phẩm 2">
+          <h3>Sáp ong</h3>
+          <p class="price">180.000đ</p>
+          <a href="#" class="buy-btn">Mua ngay</a>
+        </article>
+
+        <article class="product-card">
+          <img src="images/prod3.jpg" alt="Sản phẩm 3">
+          <h3>Mật ong ruồi</h3>
+          <p class="price">220.000đ</p>
+          <a href="#" class="buy-btn">Mua ngay</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- Chân trang -->
   <footer>
-    <p>🌈🌿Hãy để thiên nhiên chăm sóc sức khỏe của bạn!</p>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Liên hệ chúng tôi</h4>
+        <p>Địa chỉ: Khu phố 6, Thủ Đức, Thành phố Hồ Chí Minh</p>
+        <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+        <p>Email: <a href="mailto:info@honeybee.vn">info@honeybee.vn</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Chính sách</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Đăng ký nhận ưu đãi</h4>
+        <p>Nhập email để nhận khuyến mãi mới nhất và tin tức từ HONEY BEE.</p>
+        <form class="subscribe-form" action="#" onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi đã nhận email của bạn.');">
+          <input type="email" name="email" placeholder="Email của bạn" required>
+          <button type="submit">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
   </footer>
 </body>
 </html>
