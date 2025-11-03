@@ -59,3 +59,19 @@ body {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
+
+header{
+    background:#fff;
+    border-bottom:2px solid #d8c08a;
+}
+.header-inner{
+    max-width:1200px;
+    margin:0 auto;
+    padding:6px 24px;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    column-gap:24px;
+    height:84px;              
+}
