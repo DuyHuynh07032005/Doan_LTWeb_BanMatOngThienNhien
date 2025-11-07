@@ -73,7 +73,7 @@ header{
     grid-template-columns:auto 1fr auto;
     align-items:center;
     column-gap:24px;
-    height:84px;              
+    height:84px;  }            
 
 .logo {
     display: flex;
