@@ -1,4 +1,4 @@
-/* Cài đặt chung */
+/* Thiết lập cơ bản cho tất cả phần tử */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* Thanh điều hướng */
+/* Định dạng thanh điều hướng chính */
 .navbar {
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   gap: 16px;
 }
 
-/* Logo */
+/* Định dạng phần logo website */
 .logo {
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@
   color: #ffb400; /* Màu vàng cho chữ BEE */
 }
 
-/* Menu */
+/* Định dạng menu điều hướng */
 .menu {
   list-style: none;
   display: flex;
@@ -377,18 +377,20 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Make footer columns flexible and readable on narrow screens */
+/* Các cột trong footer */
 .footer-col {
   flex: 1 1 220px;
   min-width: 200px;
 }
 
+/* Tiêu đề cột */
 .footer-col h4 {
   color: #ffffff;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
+/* Văn bản và danh sách */
 .footer-col p,
 .footer-col li {
   color: #cbd5e1;
@@ -402,6 +404,7 @@ footer {
   margin: 0;
 }
 
+/* Links trong footer */
 .footer-col a {
   color: #cbd5e1;
   text-decoration: none;
@@ -411,6 +414,7 @@ footer {
   color: #ffb84d;
 }
 
+/* Form đăng ký */
 .subscribe-form {
   display: flex;
   gap: 8px;
@@ -434,6 +438,7 @@ footer {
   cursor: pointer;
 }
 
+/* Phần dưới cùng của footer */
 .footer-bottom {
   text-align: center;
   color: #94a3b8;
@@ -443,79 +448,48 @@ footer {
   padding-top: 14px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .banner {
-    height: 50vh;
-  }
-
-  .banner-text h1 {
-    font-size: 36px;
-  }
+/*  */
+.banner {
+  height: 60vh;
 }
 
-@media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
+.banner-text h1 {
+  font-size: 44px;
 }
 
-@media (max-width: 640px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-  .product-card img {
-    height: 220px;
-  }
+.product-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@media (max-width: 640px) {
-  .navbar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    padding: 12px 18px;
-  }
+.blog-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
 
-  .menu {
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
+.navbar {
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 30px;
+}
 
-  .logo img {
-    height: 42px;
-  }
+.menu {
+  flex-direction: row;
+  gap: 25px;
+}
 
-  .banner {
-    height: 40vh;
-    min-height: 260px;
-  }
+.logo img {
+  height: 48px;
+}
 
-  .banner-text h1 {
-    font-size: 26px;
-  }
+.footer-container {
+  flex-direction: row;
+  gap: 30px;
+}
 
-  .banner-text h2 {
-    font-size: 16px;
-  }
+.subscribe-form {
+  flex-direction: row;
+  align-items: flex-start;
+}
 
-  /* Footer responsive */
-  .footer-container {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .subscribe-form {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .subscribe-form input[type="email"],
-  .subscribe-form button {
-    width: 100%;
-  }
+.subscribe-form input[type="email"] {
+  width: 220px;
 }
