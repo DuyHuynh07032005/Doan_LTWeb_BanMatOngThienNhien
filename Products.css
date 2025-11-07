@@ -389,3 +389,11 @@ header{
         font-size: 14px;
     }
 }
+
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
