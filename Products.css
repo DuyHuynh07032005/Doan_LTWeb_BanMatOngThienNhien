@@ -510,3 +510,45 @@ aside ul li:hover a {
 .product button:hover {
     background: #f9a825;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 25px auto 40px;
+    width: auto;
+}
+
+.page-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font: 600 13px/1 "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.page-btn:hover {
+    background: #fff3b8;
+    border-color: #f7b500;
+    transform: translateY(-1px);
+}
+
+.page-btn.is-active {
+    background: #f7b500;
+    color: #fff;
+    border-color: #f7b500;
+    box-shadow: 0 2px 5px rgba(247,181,0,0.35);
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
