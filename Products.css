@@ -552,3 +552,20 @@ aside ul li:hover a {
     opacity: 0.4;
     cursor: not-allowed;
 }
+
+.sortbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.sortbar__label {
+    font-weight: 600;
+    color: #333;
+}
+.sortbar__select {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
