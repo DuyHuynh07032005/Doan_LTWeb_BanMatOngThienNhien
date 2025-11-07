@@ -397,3 +397,48 @@ main {
     margin: 20px auto;
     gap: 20px;
 }
+
+aside {
+    flex: 0 0 auto;
+    height: auto;
+    align-self: flex-start;
+    border-radius: 8px;
+    border: 1px solid#eee;
+    flex: 0.9;
+}
+
+aside h3 {
+    background: #fff3cd;
+    margin: 0;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+aside li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+aside ul li:hover {
+    background-color: #fff8e1;
+    color: #f4a100;
+    transform: translateX(5px);
+    box-shadow: 0 0 8px rgba(244, 161, 0, 0.2);
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+}
+
+aside ul li:hover a {
+    color: #f4a100;
+    font-weight: 600;
+}
