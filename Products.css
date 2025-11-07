@@ -591,3 +591,91 @@ aside ul li:hover a {
     background-color: #e0a800;
     transform: scale(1.1);
 }
+
+footer {
+    background-color: #0f1724;
+    color: #cbd5e1;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.footer-col {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+
+.footer-col h4 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+.footer-col p,
+.footer-col li {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.footer-col a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: #ffb84d;
+}
+
+
+.subscribe-form {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: none;
+    min-width: 220px;
+}
+
+.subscribe-form button {
+    background: #ffb84d;
+    color: #102a43;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    color: #94a3b8;
+    margin-top: 18px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding-top: 14px;
+}
