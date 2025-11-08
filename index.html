@@ -40,6 +40,13 @@
       <h1>MẬT ONG NGUYÊN CHẤT</h1>
     </div>
   </section>
+ 
+  <!-- Nội dung chính (Chào mừng) -->
+  <main class="intro">
+    <h1>Chào mừng đến với HONEY BEE</h1>
+    <p>🌿 Mật Ong Nguyên Chất – Chất lượng cao, nguồn gốc hoàn toàn tự nhiên!</p>
+    <a href="#categories" class="btn">Danh mục sản phẩm</a>
+  </main>
 
   <!-- Categories (danh mục sản phẩm) -->
   <section id="categories" class="categories">
@@ -66,41 +73,57 @@
           <h4>Phụ kiện</h4>
         </div>
       </div>
+      <div class="more-categories">
+        <a class="btn btn-outline" href="#best-sellers">Xem thêm</a>
+      </div>
     </div>
   </section>
-
-  <!-- Nội dung chính -->
-  <main class="intro">
-    <h1>Chào mừng đến với HONEY BEE</h1>
-    <p>🌿 Mật Ong Nguyên Chất – Chất lượng cao, nguồn gốc hoàn toàn tự nhiên!</p>
-    <a href="#best-sellers" class="btn">Sản phẩm bán chạy của chúng tôi</a>
-  </main>
 
   <!-- Sản phẩm bán chạy (placeholder) -->
   <section id="best-sellers" class="products">
     <div class="container">
       <h2>Sản phẩm bán chạy</h2>
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="images/prod1.jpg" alt="Sản phẩm 1">
-          <h3>Mật ong rừng</h3>
-          <p class="price">200.000đ</p>
-          <a href="#" class="buy-btn">Mua ngay</a>
-        </article>
+      <div class="products-slider">
+        <button class="slider-btn prev" aria-label="Xem trước">‹</button>
+        <div class="slider-window">
+          <div class="slider-track">
+            <article class="product-card">
+              <img src="images/prod1.jpg" alt="Sản phẩm 1">
+              <h3>Mật ong rừng</h3>
+              <p class="price">200.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
 
-        <article class="product-card">
-          <img src="images/prod2.jpg" alt="Sản phẩm 2">
-          <h3>Sáp ong</h3>
-          <p class="price">180.000đ</p>
-          <a href="#" class="buy-btn">Mua ngay</a>
-        </article>
+            <article class="product-card">
+              <img src="images/prod2.jpg" alt="Sản phẩm 2">
+              <h3>Sáp ong</h3>
+              <p class="price">180.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
 
-        <article class="product-card">
-          <img src="images/prod3.jpg" alt="Sản phẩm 3">
-          <h3>Mật ong ruồi</h3>
-          <p class="price">220.000đ</p>
-          <a href="#" class="buy-btn">Mua ngay</a>
-        </article>
+            <article class="product-card">
+              <img src="images/prod3.jpg" alt="Sản phẩm 3">
+              <h3>Mật ong ruồi</h3>
+              <p class="price">220.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+
+            <article class="product-card">
+              <img src="images/prod3.jpg" alt="Sản phẩm 4">
+              <h3>Mật ong hoa rừng</h3>
+              <p class="price">210.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+
+            <article class="product-card">
+              <img src="images/prod3.jpg" alt="Sản phẩm 5">
+              <h3>Combo quà tặng</h3>
+              <p class="price">350.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Xem sau">›</button>
       </div>
     </div>
   </section>
@@ -169,5 +192,39 @@
 
     <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
   </footer>
+  <script>
+    // Slider đơn giản cho phần Sản phẩm bán chạy
+    document.addEventListener('DOMContentLoaded', function() {
+      const track = document.querySelector('.slider-track');
+      const prev = document.querySelector('.slider-btn.prev');
+      const next = document.querySelector('.slider-btn.next');
+      if (!track || !prev || !next) return;
+      const cards = Array.from(track.children);
+      const visible = 3; // số sản phẩm hiển thị cùng lúc
+      let index = 0;
+
+      function update() {
+        const cardStyle = getComputedStyle(cards[0]);
+        const gap = parseInt(getComputedStyle(track).gap) || 18;
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const move = (cardWidth + gap) * index;
+        track.style.transform = 'translateX(-' + move + 'px)';
+        prev.disabled = index === 0;
+        next.disabled = index >= cards.length - visible;
+      }
+
+      prev.addEventListener('click', function() {
+        if (index > 0) { index--; update(); }
+      });
+
+      next.addEventListener('click', function() {
+        if (index < cards.length - visible) { index++; update(); }
+      });
+
+      window.addEventListener('resize', update);
+      // initial
+      setTimeout(update, 50);
+    });
+  </script>
 </body>
 </html>
