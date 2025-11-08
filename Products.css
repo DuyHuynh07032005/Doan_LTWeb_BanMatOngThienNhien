@@ -743,3 +743,28 @@ footer {
 .product .btn-row .btn-cart:hover{
     border-color:#e2a400;color:#e2a400;transform:scale(1.06);
 }
+
+
+#cartAlert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #222;
+    border: 2px solid #f7b500;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 9999;
+}
+
+#cartAlert.show {
+    opacity: 1;
+    transform: translateY(0);
+}
