@@ -714,3 +714,20 @@ footer {
 .btn-cart:active {
     transform: scale(0.92);
 }
+
+.btn-buy {
+    background-color: #f7b500;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-buy:hover {
+    background-color: #e2a400;
+    transform: scale(1.03);
+}
