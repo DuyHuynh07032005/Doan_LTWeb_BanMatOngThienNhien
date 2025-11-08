@@ -731,3 +731,15 @@ footer {
     background-color: #e2a400;
     transform: scale(1.03);
 }
+.product .btn-row .btn-cart{
+    width:44px;height:44px;border-radius:50%;
+    border:2px solid rgba(247,181,0,.7);
+    background:none !important;
+    color:#f7b500 !important;
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:18px;cursor:pointer;transition:.25s;
+    box-shadow:none !important;
+}
+.product .btn-row .btn-cart:hover{
+    border-color:#e2a400;color:#e2a400;transform:scale(1.06);
+}
