@@ -253,9 +253,12 @@
 
 .category-card img {
   width: 100%;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 8px;
+  height: 160px; /* tăng chiều cao để đồng bộ với product */
+  object-fit: cover; /* cắt vừa khung, giữ tỷ lệ */
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 4px solid rgba(255,250,245,0.9);
+  box-shadow: 0 8px 18px rgba(16,42,67,0.06);
 }
 
 .category-card h4 {
@@ -322,11 +325,13 @@
 
 .product-card img {
   width: 100%;
-  height: 160px;
-  object-fit: contain;
+  height: 200px; /* tăng chiều cao để hình rõ hơn */
+  object-fit: cover; /* giữ tỷ lệ và crop đẹp */
   background: linear-gradient(135deg, #fff4e6, #fffaf6);
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 12px; /* bo góc rõ hơn */
+  margin-bottom: 12px;
+  border: 4px solid rgba(255,250,245,0.85); /* khung nhẹ màu kem */
+  box-shadow: 0 8px 20px rgba(16,42,67,0.06); /* bóng nhẹ để nổi ảnh */
 }
 
 .product-card h3 {
@@ -492,4 +497,73 @@ footer {
 
 .subscribe-form input[type="email"] {
   width: 220px;
+}
+
+/* Nút Xem thêm dưới danh mục */
+.more-categories {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.btn.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #1b3b5a;
+  border: 2px solid #ffb84d;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Slider sản phẩm bán chạy */
+.products .products-slider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.products .slider-window {
+  overflow: hidden;
+  flex: 1;
+}
+
+.products .slider-track {
+  display: flex;
+  gap: 18px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.products .slider-track .product-card {
+  flex: 0 0 32%; /* vừa vặn để hiển thị 3 items với gap */
+  box-sizing: border-box;
+}
+
+.slider-btn {
+  background: #ffb84d;
+  border: none;
+  color: #102a43;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* điều chỉnh nhỏ cho product-card khi ở trong slider (giữ thẩm mỹ) */
+.products .product-card img {
+  height: 200px; /* đồng bộ với grid */
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid rgba(255,250,245,0.85);
+  box-shadow: 0 8px 20px rgba(16,42,67,0.06);
 }
