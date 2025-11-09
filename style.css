@@ -162,9 +162,39 @@
 .intro p {
   font-size: 18px;
   color: #555;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto 25px;
   line-height: 1.6;
+}
+
+.why-choose-us {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: left;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.why-choose-us h2 {
+  font-size: 24px;
+  color: #1b3b5a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.benefits-list p {
+  padding-left: 15px;
+  font-size: 16px;
+  color: #475569;
+  margin: 0;
 }
 
 .btn {
@@ -536,7 +566,7 @@ footer {
 }
 
 .products .slider-track .product-card {
-  flex: 0 0 32%; /* vừa vặn để hiển thị 3 items với gap */
+  flex: 0 0 32%; /* vừa để hiển thị 3 items với gap */
   box-sizing: border-box;
 }
 
@@ -559,7 +589,7 @@ footer {
   cursor: not-allowed;
 }
 
-/* điều chỉnh nhỏ cho product-card khi ở trong slider (giữ thẩm mỹ) */
+/* điều chỉnh nhỏ cho product-card */
 .products .product-card img {
   height: 200px; /* đồng bộ với grid */
   object-fit: cover;
