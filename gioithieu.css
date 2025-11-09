@@ -146,6 +146,51 @@
   font-size: 16px;
 }
 
+/* Lý do nên chọn */
+.why-choose-section {
+  padding: 60px 0;
+  background: linear-gradient(to bottom right, #fff8f0, #ffffff);
+}
+
+.why-choose-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-choose-content h2 {
+  font-size: 32px;
+  color: #1b3b5a;
+  margin-bottom: 30px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(16,42,67,0.06);
+}
+
+.benefits-list p {
+  font-size: 17px;
+  color: #475569;
+  line-height: 1.6;
+  padding-left: 15px;
+  position: relative;
+}
+
+.benefits-list p::before {
+  content: "❂";
+  color: #ffb400;
+  position: absolute;
+  left: -10px;
+  font-weight: bold;
+}
+
 /* Mission & Vision */
 .mission-section {
   padding: 60px 0;
@@ -188,6 +233,51 @@
   margin-bottom: 6px;
 }
 .stat p {
+  color: #475569;
+}
+
+/* Quy trình sản xuất */
+.process-section {
+  padding: 60px 0;
+  background: linear-gradient(to bottom right, #fff8f0, #ffffff);
+}
+
+.process-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #1b3b5a;
+  margin-bottom: 40px;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(16,42,67,0.06);
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.process-step .step-number {
+  font-size: 17px;
+  color: #ffb400;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.process-step p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
   color: #475569;
 }
 
