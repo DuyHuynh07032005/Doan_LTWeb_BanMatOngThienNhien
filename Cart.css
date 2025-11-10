@@ -725,3 +725,9 @@ header{
     border-radius:50%;
     background:#2ecc71
 }
+
+/* helpers */
+a{
+    color:inherit;
+    text-decoration:none
+}
