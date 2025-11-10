@@ -113,3 +113,28 @@
           </article>
         </div>
       </section>
+
+      <!-- Lịch giao hàng -->
+      <section class="addon card schedule-card">
+        <div class="addon-head">
+          <h5>Chọn lịch giao hàng</h5>
+          <span class="hint">Ưu tiên giao trong giờ bạn rảnh</span>
+        </div>
+        <div class="schedule-grid">
+          <label>
+            Ngày giao
+            <input type="date" id="shipDate" min="">
+          </label>
+          <label>
+            Khung giờ
+            <select id="shipSlot">
+              <option value="Sáng (8:00–11:00)">Sáng (8:00–11:00)</option>
+              <option value="Trưa (11:00–13:30)">Trưa (11:00–13:30)</option>
+              <option value="Chiều (13:30–17:30)">Chiều (13:30–17:30)</option>
+              <option value="Tối (18:30–21:00)">Tối (18:30–21:00)</option>
+            </select>
+          </label>
+          <button class="btn save-slot" type="button">Lưu lịch</button>
+          <p class="slot-note" id="shipSaved" hidden></p>
+        </div>
+      </section>
