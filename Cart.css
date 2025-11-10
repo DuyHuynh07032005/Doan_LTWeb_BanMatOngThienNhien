@@ -551,3 +551,19 @@ header{
     font-weight: 800;
     cursor: pointer;
 }
+
+/* Ô nhập số lượng */
+.qty input {
+    width: 60px;
+    height: 36px;
+    border: 0;
+    text-align: center;
+    color: var(--ink);
+    outline: none;
+}
+
+/* Ô hiển thị tổng tiền của dòng sản phẩm */
+.line {
+    text-align: right;
+    min-width: 120px;
+}
