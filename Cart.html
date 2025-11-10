@@ -216,3 +216,23 @@
             <div class="pay-note">Thanh toán khi nhận hàng – không phụ phí</div>
           </div>
         </label>
+
+        <label class="pay-card">
+          <input type="radio" name="pay" value="bank">
+          <div class="pay-body">
+            <div class="pay-title">Chuyển khoản ngân hàng</div>
+            <div class="pay-note">Miễn phí – hiển thị thông tin tài khoản sau khi chọn</div>
+          </div>
+        </label>
+        <div class="pay-detail" id="bankDetail" hidden>
+          <div class="bank-list">
+            <label><input type="radio" name="bank" value="VCB" checked> Vietcombank</label>
+            <label><input type="radio" name="bank" value="TCB"> Techcombank</label>
+            <label><input type="radio" name="bank" value="MB"> MB Bank</label>
+          </div>
+          <div class="bank-info" id="bankInfo">
+            <p><b>Chủ TK:</b> NGUYEN HONEY BEE</p>
+            <p><b>STK:</b> 0123 456 789 (Vietcombank – CN Tân Định)</p>
+            <p><b>Nội dung CK:</b> <code>HB-{{SĐT}}-{{Mã đơn}}</code></p>
+          </div>
+        </div>
