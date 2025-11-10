@@ -594,3 +594,49 @@ header{
     background: #fff8dc;
     border: 1px solid var(--border);
 }
+
+/* ====== summary ====== */
+.summary{
+    position:sticky;
+    top:88px;
+    height:max-content;
+    padding:16px
+}
+.summary h4{margin:2px 0 10px;font-size:18px}
+
+/* ship cards */
+.ship {
+    display: grid;
+    gap: 10px;
+    margin: 6px 0 10px;
+}
+
+.ship-card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: .2s;
+    user-select: none;
+    background: #fff;
+}
+
+.ship-card:hover {
+    box-shadow: 0 6px 16px rgba(247, 181, 0, .25);
+}
+
+.ship-card input {
+    accent-color: var(--bee);
+}
+
+.ship-title {
+    font-weight: 800;
+}
+
+.ship-note {
+    font-size: 12px;
+    color: var(--muted);
+}
