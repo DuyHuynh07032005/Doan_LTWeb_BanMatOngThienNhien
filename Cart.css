@@ -731,3 +731,82 @@ a{
     color:inherit;
     text-decoration:none
 }
+/* ====== payment ====== */
+.summary h5{
+    margin:12px 0 8px;
+    font-size:15px
+}
+.pay{
+    margin-top:6px
+}
+.pay-card{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:10px 12px;
+    cursor:pointer;
+    background:#fff;
+    transition:.2s;
+    margin-bottom:10px
+}
+.pay-card:hover{
+    box-shadow:0 6px 16px rgba(247,181,0,.25)
+}
+.pay-card input{
+    accent-color:var(--bee)
+}
+.pay-title{
+    font-weight:800
+}
+.pay-note{
+    font-size:12px;
+    color:var(--muted)
+}
+
+.pay-detail{
+    border:1px dashed var(--border);
+    border-radius:12px;
+    padding:10px 12px;
+    margin:-6px 0 10px 28px;
+    background:#fffbeb
+}
+.bank-list{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:8px
+}
+.bank-list label{
+    display:flex;
+    gap:6px;
+    align-items:center;
+    font-size:13px
+}
+.bank-info p{
+    margin:4px 0;
+    font-size:13px
+}
+.wallet-logos{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap
+}
+.wallet-logos .w{
+    padding:6px 10px;
+    border-radius:10px;
+    background:#fff;
+    border:1px solid var(--border);
+    font-size:12px;
+    font-weight:700
+}
+.wallet-logos .momo{
+    background:#fff0f5
+}
+.wallet-logos .zalo{
+    background:#eef7ff
+}
+.wallet-logos .vnpay{
+    background:#f0f5ff
+}
