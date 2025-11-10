@@ -582,3 +582,15 @@ header{
 .remove:hover {
     transform: scale(1.05);
 }
+
+/* Thanh công cụ trên danh sách (chọn tất cả / xóa đã chọn) */
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin: 6px;
+    border-radius: 12px;
+    background: #fff8dc;
+    border: 1px solid var(--border);
+}
