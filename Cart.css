@@ -219,3 +219,21 @@ header{
 .cart:hover::after {
     transform: translateX(-50%) scaleX(1);
 }
+
+.account-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.account-menu a {
+    font-size: 14px;
+    color: #222;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.account-menu a:hover {
+    color: #f7b500;
+    transform: translateY(-1px);
+}
