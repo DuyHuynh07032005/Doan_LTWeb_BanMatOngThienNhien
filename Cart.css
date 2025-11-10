@@ -400,3 +400,24 @@ header{
 }
 
 /* ====== layout ====== */
+.cart-modern {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 18px;
+    font-family: Montserrat, system-ui;
+    color: var(--brown);
+}
+.card {
+    background: var(--white);
+    border-radius: 18px;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1.8fr .9fr;
+    gap: 18px;
+}
+@media (max-width: 992px) {
+    .grid { grid-template-columns: 1fr; }
+}
