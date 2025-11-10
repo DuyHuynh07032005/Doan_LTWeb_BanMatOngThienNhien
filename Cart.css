@@ -74,3 +74,42 @@ header{
     align-items:center;
     column-gap:24px;
     height:84px;  }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 84px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.logo img {
+    height: 130px;
+    width: auto;
+    object-fit: contain;
+    transform-origin: left center;
+}
+
+.logo-text {
+    line-height: 1.05;
+}
+
+.logo-text h1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin: 0;
+    color: #111;
+    letter-spacing: 0.6px;
+}
+
+.logo-text span {
+    color: #f7b500;
+}
+
+.logo-text p {
+    font-size: 0.7rem;
+    color: #555;
+    margin: 2px 0 0 0;
+    font-weight: 600;
+}
