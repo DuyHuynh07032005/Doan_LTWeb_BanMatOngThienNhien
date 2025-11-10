@@ -577,3 +577,8 @@ header{
     cursor: pointer;
     transition: .2s;
 }
+
+/* Hiệu ứng phóng to nhẹ khi hover nút xóa */
+.remove:hover {
+    transform: scale(1.05);
+}
