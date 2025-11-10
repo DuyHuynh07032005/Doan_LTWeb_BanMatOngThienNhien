@@ -659,3 +659,27 @@ header{
 .btn.pill {
     border-radius: 999px;
 }
+
+
+/* totals */
+.rows{
+    margin-top:6px
+}
+.row-2{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:8px 0
+}
+.row-2.mute{
+    color:var(--muted)
+}
+.row-2.total{
+    font-size:20px;
+    font-weight:900
+}
+.summary hr{
+    border:0;
+    border-top:1px dashed var(--border);
+    margin:10px 0
+}
