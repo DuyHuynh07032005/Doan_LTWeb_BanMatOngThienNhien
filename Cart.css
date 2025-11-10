@@ -567,3 +567,13 @@ header{
     text-align: right;
     min-width: 120px;
 }
+
+/* Nút xóa sản phẩm */
+.remove {
+    border: 0;
+    background: none;
+    color: var(--danger);
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+}
