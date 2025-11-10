@@ -390,3 +390,11 @@ header{
         font-size: 14px;
     }
 }
+/* ====== palette ====== */
+:root{
+    --bee:#f7b500; --bee-600:#e49f00;
+    --cream:#fffaf0; --white:#fff;
+    --ink:#2b2e2a; --brown:#4b2e05;
+    --muted:#8a8a8a; --danger:#d14;
+    --border:#f3d982; --shadow:0 10px 28px rgba(0,0,0,.08);
+}
