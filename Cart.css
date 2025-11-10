@@ -525,3 +525,29 @@ header{
     color: var(--muted);
     font-size: 13px;
 }
+
+/* Giá của từng sản phẩm */
+.price-each {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Ô điều chỉnh số lượng (–, input, +) */
+.qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Nút tăng/giảm */
+.qty .step {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background: var(--cream);
+    font-weight: 800;
+    cursor: pointer;
+}
