@@ -421,3 +421,40 @@ header{
 @media (max-width: 992px) {
     .grid { grid-template-columns: 1fr; }
 }
+
+/* ====== Freeship ====== */
+.fs-card {
+    background: linear-gradient(135deg, #fff7d6, #fff);
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    padding: 14px 16px;
+}
+.fs-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.bee-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bee);
+}
+.fs-bar {
+    height: 10px;
+    background: #f7e9b0;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+.fs-fill {
+    height: 10px;
+    background: linear-gradient(90deg, var(--bee), var(--bee-600));
+    border-radius: 999px;
+}
+.fs-note {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink);
+}
