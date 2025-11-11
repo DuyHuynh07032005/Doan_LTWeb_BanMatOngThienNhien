@@ -768,3 +768,9 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+/* Ẩn sản phẩm khi đã lọc */
+.product[data-hide] { display: none !important; }
+
+/* Optional: active category highlight */
+#catList li.is-active { background: #fff3cd; border-radius: 8px; }
+#catList li { cursor: pointer; }
