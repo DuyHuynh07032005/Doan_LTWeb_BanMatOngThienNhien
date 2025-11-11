@@ -1,6 +1,4 @@
-/* Blog.css (Gộp CSS Chung + CSS Blog + CSS Footer) */
 
-/* === PHẦN 1: CSS CHUNG (TOPBAR, HEADER, BANNER) === */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -30,11 +28,6 @@ body {
     gap: 16px;
 }
 
-@keyframes blinkText {
-    0%, 100% { opacity: 1; color: #fff9e6; }
-    50% { opacity: 0.6; color: #ffe082; }
-}
-
 .topbar-links a {
     color: #fff;
     text-decoration: none;
@@ -43,9 +36,6 @@ body {
     animation: blinkText 2.5s ease-in-out infinite;
 }
 
-.topbar-links a:nth-child(1) { animation-delay: 0s; }
-.topbar-links a:nth-child(2) { animation-delay: 0.5s; }
-.topbar-links a:nth-child(3) { animation-delay: 1s; }
 
 .topbar .welcome {
     position: relative;
@@ -62,7 +52,6 @@ body {
     100% { background-position: -200% 0; }
 }
 
-
 header{
     background:#fff;
     border-bottom:2px solid #d8c08a;
@@ -71,7 +60,6 @@ header{
     max-width:1200px;
     margin:0 auto;
     padding:6px 24px;
-    /* Tối ưu hóa: Bỏ spacer div */
     display:grid;
     grid-template-columns:auto 1fr auto;
     align-items:center;
@@ -167,7 +155,6 @@ header{
     transform: translateX(-50%) scaleX(1);
 }
 
-/* Định nghĩa chung cho Cart (Đã gộp) */
 .cart {
     display: flex;
     align-items: center;
@@ -220,33 +207,21 @@ header{
 
 @media (max-width: 992px){
     .header-inner{ grid-template-columns:1fr auto; row-gap:10px; }
-    /* .spacer đã bị loại bỏ */
     .logo img{ width:140px; }
     .main-nav{ gap:18px; }
 }
 
 .banner {
     position: relative;
-    background-image: url("../assets/banner1.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    image-rendering: crisp-edges;
-    -webkit-image-rendering: optimize-contrast;
-    height: 180px;
-    border-bottom: 2px solid #d8c08a;
 }
 
-.banner::before{
-    content:"";
-    position:absolute; inset:0;
-    background:
-            linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.35));
 }
 
 .banner-inner {
     position: relative;
-    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
@@ -275,13 +250,11 @@ header{
 }
 
 @media (max-width: 992px){
-    .banner{ height: 260px; }
     .banner-inner h2{ font-size: 36px; }
     .banner-inner p{ font-size: 16px; }
 }
 @media (max-width: 600px) {
     .banner {
-        height: 220px;
     }
     .banner-inner h2 {
         font-size: 28px;
@@ -291,9 +264,6 @@ header{
     }
 }
 
-/* ------------------------------------------------ */
-/* === PHẦN 2: CSS TRANG BLOG === */
-/* ------------------------------------------------ */
 
 .blog-grid {
     display: grid;
@@ -425,12 +395,8 @@ header{
     }
 }
 
-/* ------------------------------------------------ */
-/* === PHẦN 3: CSS FOOTER === */
-/* ------------------------------------------------ */
 footer {
     background-color: #0f1724;
-    color: #e2e8f0; /* Đã điều chỉnh màu để tăng độ tương phản */
     padding: 40px 20px 20px;
     font-size: 14px;
 }
