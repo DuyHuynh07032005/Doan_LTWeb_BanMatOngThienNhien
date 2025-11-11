@@ -218,3 +218,44 @@ document.addEventListener("DOMContentLoaded", () => {
     showPage(1);
 })();
 
+
+// ===== SẮP XẾP THEO GIÁ (ASC/DESC) + FADE =====
+(function () {
+    const section = document.querySelector('.product-list');
+    const sortSel = document.getElementById('sortSelect');
+    const sortBar = document.querySelector('.top-sortbar'); // mốc để chèn lại sản phẩm
+    if (!section || !sortSel || !sortBar) return;
+
+    // Chụp thứ tự ban đầu để reset khi chọn "Mới nhất"
+    const initial = Array.from(section.querySelectorAll('.product'));
+
+    function sortProducts(mode) {
+        const items = [...initial];
+        if (mode === 'priceAsc')  items.sort((a, b) => (+a.dataset.price) - (+b.dataset.price));
+        if (mode === 'priceDesc') items.sort((a, b) => (+b.dataset.price) - (+a.dataset.price));
+        return items;
+    }
+
+    // KHÔNG dùng innerHTML = ''; chỉ di chuyển node .product
+    function placeProducts(nodes) {
+        const frag = document.createDocumentFragment();
+        nodes.forEach(n => frag.appendChild(n));
+        section.insertBefore(frag, sortBar); // chèn TRƯỚC thanh sắp xếp
+    }
+
+    function fadeOutIn(cb) {
+        section.style.transition = 'opacity .35s ease';
+        section.style.opacity = '0';
+        setTimeout(() => { cb?.(); section.style.opacity = '1'; }, 350);
+    }
+
+    sortSel.addEventListener('change', () => {
+        const val = sortSel.value; // newest | priceAsc | priceDesc
+        fadeOutIn(() => {
+            const nodes = (val === 'newest') ? initial : sortProducts(val);
+            placeProducts(nodes);
+            // Sau sắp xếp quay về TRANG 1
+            if (typeof window.showPage === 'function') window.showPage(1);
+        });
+    });
+})();
