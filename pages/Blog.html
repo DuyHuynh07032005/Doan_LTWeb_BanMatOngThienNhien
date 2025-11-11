@@ -159,6 +159,10 @@
       </article>
 
       <div class="pagination">
+        <a href="#" data-page="1" class="active">1</a>
+        <a href="#" data-page="2">2</a>
+        <a href="#" data-page="3">3</a>
+        <a href="#" data-page="3">4</a>
         <a href="#">→</a>
       </div>
     </div>
@@ -168,6 +172,7 @@
       <div class="widget search-widget">
         <h4>Tìm kiếm</h4>
         <div style="display: flex;">
+          <label for="search-input" class="sr-only">Nhập từ khóa tìm kiếm</label>
           <input type="text" placeholder="Nhập từ khóa..." id="search-input" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px 0 0 4px;">
           <button id="search-button" style="padding: 10px 15px; border: none; background: #f7b500; color: white; border-radius: 0 4px 4px 0; cursor: pointer;">🔎</button>
         </div>
@@ -176,12 +181,20 @@
       <div class="widget categories-widget">
         <h4>Danh mục</h4>
         <ul>
+          <li><a href="#" data-category="Sức khỏe">Sức khỏe <span class="category-count">(12)</span></a></li>
+          <li><a href="#" data-category="Làm đẹp">Làm đẹp <span class="category-count">(12)</span></a></li>
+          <li><a href="#" data-category="Công thức">Công thức <span class="category-count">(12)</span></a></li>
+          <li><a href="#" data-category="Tin tức chung">Tin tức chung <span class="category-count">(12)</span></a></li>
         </ul>
       </div>
 
       <div class="widget popular-posts-widget">
         <h4>Bài viết phổ biến</h4>
         <ul>
+          <li><a href="post/post-detail-1.html">Mật ong hoa cà phê có gì đặc biệt?</a></li>
+          <li><a href="post/post-detail-1.html">Lưu ý khi cho trẻ dùng mật ong</a></li>
+          <li><a href="post/post-detail-1.html">Khởi nghiệp với nghề nuôi ong</a></li>
+          <li><a href="post/post-detail-1.html">Phân biệt mật ong thật giả đơn giản</a></li>
         </ul>
       </div>
     </aside>
@@ -212,6 +225,8 @@
       <h4>Đăng ký nhận tin</h4>
       <p>Nhận thông tin khuyến mãi mới nhất từ chúng tôi.</p>
       <div class="subscribe-form">
+        <label for="subscribe-email" class="sr-only">Địa chỉ Email đăng ký</label>
+        <input type="email" id="subscribe-email" placeholder="Nhập email của bạn">
         <button>Đăng ký</button>
       </div>
     </div>
