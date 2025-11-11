@@ -5,6 +5,7 @@
     const safeParse = (txt) => { try { return JSON.parse(txt); } catch { return null; } };
     const getCart   = () => safeParse(localStorage.getItem(KEY)) || [];
     const setCart   = (c) => { localStorage.setItem(KEY, JSON.stringify(c)); updateBadge(c); };
+    const countCart = (cart = getCart()) => cart.reduce((s, i) => s + (i.qty || 0), 0);
 
     function updateBadge(cart = getCart()) {
         const badgeEl = document.getElementById("cartBadge");
@@ -169,4 +170,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })();
 
+(function () {
+    const PER = 16;
+    const pager = document.getElementById('pager');
+    if (!pager) return;
+    let current = 1;
+
+    function makeBtn(text, cls, disabled, onClick) {
+        const b = document.createElement('button');
+        b.className = 'page-btn ' + (cls || '');
+        b.innerHTML = (text === '<') ? '&lt;' : (text === '>') ? '&gt;' : text;
+        b.disabled = !!disabled;
+        b.onclick = onClick;
+        return b;
+    }
+
+    function renderPager(total) {
+        pager.innerHTML = '';
+        pager.style.display = total > 1 ? 'flex' : 'none';
+        pager.appendChild(makeBtn('<','prev', current === 1, () => showPage(current - 1)));
+        for (let p = 1; p <= total; p++) {
+            const b = makeBtn(String(p), '', false, () => showPage(p));
+            if (p === current) b.classList.add('is-active');
+            pager.appendChild(b);
+        }
+        pager.appendChild(makeBtn('>','next', current === total, () => showPage(current + 1)));
+    }
+
+    function showPage(page) {
+        // CHỈ lấy các product đang hiển thị (không hidden)
+        const items = Array.from(document.querySelectorAll('.product-list .product:not([hidden])'));
+        const total = Math.max(1, Math.ceil(items.length / PER));
+        current = Math.min(Math.max(1, page), total);
+
+        const start = (current - 1) * PER, end = start + PER;
+        // Ẩn tất cả trước
+        document.querySelectorAll('.product-list .product').forEach(el => el.style.display = 'none');
+        // Chỉ hiện phần trang hiện tại trong tập đã lọc
+        items.slice(start, end).forEach(el => el.style.display = '');
+
+        renderPager(total);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Export để sort/filter gọi lại
+    window.showPage = showPage;
+    showPage(1);
+})();
 
