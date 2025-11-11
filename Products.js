@@ -259,3 +259,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 })();
+// ===== FILTER BY CATEGORY =====
+(function () {
+    const list = document.querySelector('.product-list');
+    const catList = document.getElementById('catList');
+    if (!list || !catList) return;
+
+    catList.querySelectorAll('li').forEach(li => {
+        li.addEventListener('click', () => {
+            // active UI
+            catList.querySelectorAll('li').forEach(x => x.classList.remove('is-active'));
+            li.classList.add('is-active');
+
+            // filter
+            const filter = li.dataset.filter || 'all';
+            list.querySelectorAll('.product').forEach(card => {
+                const show = (filter === 'all') || (card.dataset.cat === filter);
+                card.hidden = !show;              // <-- ẨN/HIỆN bằng thuộc tính hidden
+            });
+
+            // Reset về trang 1 sau khi lọc
+            if (typeof window.showPage === 'function') window.showPage(1);
+
+            // Scroll lên vùng sản phẩm
+            const top = list.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top, behavior: 'smooth' });
+        });
+    });
+})();
