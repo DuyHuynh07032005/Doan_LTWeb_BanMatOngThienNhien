@@ -119,6 +119,7 @@ header{
 }
 
 .main-nav{
+    justify-self: end;
     display: flex;
     align-items: center;
     gap: 22px;
