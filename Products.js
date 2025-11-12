@@ -287,3 +287,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 })();
+// ==== ĐI CHI TIẾT SẢN PHẨM TỪ TRANG LIST ====
+document.addEventListener('click', (e) => {
+    const clickOn = e.target;
+    const card = clickOn.closest('.product');
+    if (!card) return;
+
+    // chỉ mở chi tiết khi click ảnh hoặc tên
+    if (!(clickOn.matches('img') || clickOn.closest('.name'))) return;
+
+    // gom data của sản phẩm đang bấm
+    const current = {
+        id: card.dataset.id, name: card.dataset.name, price: Number(card.dataset.price||0),
+        image: card.dataset.image || card.querySelector('img')?.getAttribute('src') || '',
+        cat: card.dataset.cat || 'other', discount: card.querySelector('.discount')?.textContent?.trim() || ''
+    };
+
+    // gom toàn bộ catalog (để hiển thị liên quan)
+    const catalog = Array.from(document.querySelectorAll('.product-list .product')).map(p => ({
+        id: p.dataset.id, name: p.dataset.name, price: Number(p.dataset.price||0),
+        image: p.dataset.image || p.querySelector('img')?.getAttribute('src') || '',
+        cat: p.dataset.cat || 'other', discount: p.querySelector('.discount')?.textContent?.trim() || ''
+    }));
+
+    localStorage.setItem('hb_current', JSON.stringify(current));
+    localStorage.setItem('hb_catalog', JSON.stringify(catalog));
+
+    // điều hướng (để reload vẫn lấy được theo id)
+    location.href = `product-detail.html?id=${encodeURIComponent(current.id)}`;
+});
