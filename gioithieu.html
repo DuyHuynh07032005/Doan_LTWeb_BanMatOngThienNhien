@@ -5,32 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HONEY BEE - Giới thiệu</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="gioithieu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Thanh điều hướng -->
+  <!-- Topbar + Thanh điều hướng mới -->
+  <div class="topbar">
+    <div class="topbar-inner">
+        <span class="welcome">Chào mừng bạn đến với website bán mật ong thiên nhiên của nhóm 19</span>
+        <div class="topbar-links">
+            <a href="#">Tài khoản</a>
+            <a href="#">Thanh toán</a>
+            <a href="#">Đăng nhập</a>
+            <a href="#">Đăng ký</a>
+        </div>
+    </div>
+  </div>
+
   <header>
-    <nav class="navbar">
+    <div class="header-inner">
       <div class="logo">
-        <img src="images/logo.png" alt="Logo HONEY BEE">
-        <span class="logo-text">HONEY <span class="bee-text">BEE</span></span>
+        <img src="images/logo.png" alt="Honey Bee Logo">
+        <div class="logo-text">
+          <h1>HONEY <span>BEE</span></h1>
+          <p>Mật ong nguyên chất</p>
+        </div>
       </div>
-
-      <ul class="menu">
-        <li><a href="index.html">Trang chủ</a></li>
-        <li><a href="gioithieu.html" class="active">Giới thiệu</a></li>
-        <li><a href="#">Sản phẩm</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#">Liên hệ</a></li>
-      </ul>
-
-      <div class="account">
-        <i class="fa-solid fa-user"></i>
-        <a href="#" class="login">Đăng nhập</a> |
-        <a href="#" class="register">Đăng ký</a>
-      </div>
-    </nav>
+      <nav class="main-nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Thanh toán</a>
+        <a href="gioithieu.html" class="active">Giới thiệu</a>
+        <a href="#">Blog / Tin tức</a>
+        <a href="Contact.html">Liên hệ</a>
+        <div class="cart">
+          🛒
+          <span class="cart-text">Giỏ hàng</span>
+          <span class="badge">0</span>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <!-- Banner giới thiệu -->

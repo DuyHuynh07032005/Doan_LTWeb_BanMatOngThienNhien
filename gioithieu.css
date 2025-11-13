@@ -1,9 +1,8 @@
 /* Banner giới thiệu */
 .about-banner {
-  /* Dùng overlay nhẹ giống trang chủ để không quá tối */
   background: linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.32)), url('images/banner.jpg');
   background-size: cover; /* ảnh phủ đầy khung và crop hợp lý */
-  background-position: center center; /* thay 'center top' nếu muốn lấy phần trên ảnh */
+  background-position: center center; 
   background-repeat: no-repeat;
   height: 60vh;
   min-height: 320px;
@@ -32,7 +31,7 @@
   opacity: 0.95;
 }
 
-/* Nếu bạn vô tình chèn <img> trong banner-content, ẩn nó - dùng background thay thế */
+/* Nếu vô tình chèn img trong banner-content, ẩn nó - dùng background thay thế */
 .about-banner .banner-content img {
   display: none;
 }

@@ -1,0 +1,125 @@
+  .signup-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom right, #e8f1ff, #ffffff);
+      padding: 20px;
+    }
+
+    .signup-box {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      padding: 40px;
+      border-top: 4px solid #f7b500;
+    }
+
+    .signup-box h2 {
+      font-size: 28px;
+      color: #1b3b5a;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .signup-box p {
+      color: #666;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      transition: border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #f7b500;
+      box-shadow: 0 0 8px rgba(247, 181, 0, 0.2);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-row .form-group {
+      margin-bottom: 0;
+    }
+
+    .terms {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .terms a {
+      color: #f7b500;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .terms a:hover {
+      text-decoration: underline;
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #f7b500, #ff9b00);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 18px rgba(247, 181, 0, 0.2);
+    }
+
+    .signup-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(247, 181, 0, 0.3);
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #f7b500;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
