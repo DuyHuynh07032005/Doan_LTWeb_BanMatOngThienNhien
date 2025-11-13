@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HONEY BEE - Đăng nhập</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Topbar + Header -->
+  <div class="topbar">
+    <div class="topbar-inner">
+        <span class="welcome">Chào mừng bạn đến với website bán mật ong thiên nhiên của nhóm 19</span>
+        <div class="topbar-links">
+            <a href="#">Tài khoản</a>
+            <a href="#">Thanh toán</a>
+            <a href="login.html">Đăng nhập</a>
+            <a href="signup.html">Đăng ký</a>
+        </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Honey Bee Logo">
+        <div class="logo-text">
+          <h1>HONEY <span>BEE</span></h1>
+          <p>Mật ong nguyên chất</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Thanh toán</a>
+        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="#">Blog / Tin tức</a>
+        <a href="Contact.html">Liên hệ</a>
+        <div class="cart">
+          🛒
+          <span class="cart-text">Giỏ hàng</span>
+          <span class="badge">0</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Đăng nhập</h2>
+      <p>Vui lòng nhập thông tin để tiếp tục</p>
+
+      <form onsubmit="event.preventDefault(); alert('Đăng nhập thành công!');">
+        <div class="form-group">
+          <label for="email">Email hoặc Tên đăng nhập</label>
+          <input type="text" id="email" name="email" placeholder="Nhập email hoặc tên đăng nhập" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mật khẩu</label>
+          <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+        </div>
+
+        <div class="remember-forgot">
+          <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox" name="remember" style="width: auto;">
+            Ghi nhớ tôi
+          </label>
+          <a href="#">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Đăng nhập</button>
+      </form>
+
+      <p class="signup-link">
+        Chưa có tài khoản? <a href="signup.html">Đăng ký ngay</a>
+      </p>
+
+      <div class="social-login">
+        <p>Hoặc đăng nhập bằng</p>
+        <div class="social-buttons">
+          <button class="social-btn" onclick="alert('Đăng nhập với Facebook')">📘 Facebook</button>
+          <button class="social-btn" onclick="alert('Đăng nhập với Google')">🔍 Google</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Liên hệ chúng tôi</h4>
+        <p>Địa chỉ: Khu phố 6, Thủ Đức, Thành phố Hồ Chí Minh</p>
+        <p>Hotline: 0123 456 789</p>
+        <p>Email: info@honeybee.vn</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Chính sách</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Về chúng tôi</h4>
+        <ul>
+          <li><a href="gioithieu.html">Giới thiệu</a></li>
+          <li><a href="#">Lĩnh vực hoạt động</a></li>
+          <li><a href="#">Triết lý kinh doanh</a></li>
+          <li><a href="#">Cơ sở vật chất</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Đăng ký nhận ưu đãi</h4>
+        <p>Nhập email để nhận khuyến mãi mới nhất và tin tức từ HONEY BEE.</p>
+        <form class="subscribe-form" action="#" onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi đã nhận email của bạn.');">
+          <input type="email" name="email" placeholder="Email của bạn" required>
+          <button type="submit">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
+  </footer>
+</body>
+</html>
