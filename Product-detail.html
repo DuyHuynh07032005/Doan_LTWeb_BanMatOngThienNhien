@@ -247,3 +247,25 @@
         </div>
       </div>
     </div>
+
+    <button id="backToTop" title="Lên đầu trang">↑</button>
+
+    <script>
+
+      window.onscroll = function() {
+        const btn = document.getElementById("backToTop");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+
+      document.getElementById("backToTop").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+    </script>
+
+  </section>
+</main>
