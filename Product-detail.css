@@ -653,3 +653,58 @@ header{
     border-radius: 2px;
     margin-top: 6px;
 }
+/* ===== MÔ TẢ SẢN PHẨM ===== */
+.pd-desc {
+    max-width: 900px;      /* cho khối mô tả rộng hơn */
+    background: #fffdf8;   /* nền vàng nhạt cho nhẹ mắt */
+    border-radius: 10px;
+    padding: 20px 28px;    /* thêm khoảng trống bên trong */
+    line-height: 1.7;
+    margin-top: 20px;
+    border: 1px solid #f3e3a6; /* viền nhẹ vàng mật ong */
+    box-shadow: 0 2px 8px rgba(247, 181, 0, 0.1);
+    transition: all 0.25s ease;
+}
+
+/* Khi hover – sáng nhẹ, tạo cảm giác tinh tế */
+.pd-desc:hover {
+    background: #fff9e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(247, 181, 0, 0.15);
+}
+
+/* Tiêu đề mô tả */
+.pd-desc h3 {
+    margin-top: 0;
+    color: #2b2b2b;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-left: 4px solid #f7b500;
+    padding-left: 10px;
+}
+
+/* Nội dung mô tả */
+.pd-desc p {
+    color: #444;
+    font-size: 15px;
+    margin: 0;
+    text-align: justify;
+}
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fcbf24;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
