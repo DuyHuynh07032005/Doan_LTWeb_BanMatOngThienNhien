@@ -1,0 +1,58 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: #fffef8;
+    color: #333;
+}
+
+/* --- Top Bar --- */
+.topbar {
+    background: #f7b500;
+    color: #fff9e6;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.topbar-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.95;
+    font-weight: 600;
+    /* Giữ lại animation nếu muốn */
+    animation: blinkText 2.5s ease-in-out infinite;
+}
+
+@keyframes blinkText {
+    0%, 100% { opacity: 1; color: #fff9e6; }
+    50% { opacity: 0.6; color: #ffe082; }
+}
+
+.topbar .welcome {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #fff 0%, #fff 30%, #ffe082 50%, #fff 70%, #fff 100%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
