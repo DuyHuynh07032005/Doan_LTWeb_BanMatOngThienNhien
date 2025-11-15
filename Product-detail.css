@@ -337,3 +337,319 @@ header{
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+
+:root {
+    yellow:#f7b500;
+    bg:#fffef8;
+    text:#333;
+}
+
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:16px;
+}
+.pd{
+    display:grid;
+    grid-template-columns:520px 1fr;
+    gap:28px;
+    align-items:start
+}
+.pd-main{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 4px 18px rgba(0,0,0,.06)
+}
+.pd-badges{
+    margin-top:10px;
+    display:flex;
+    gap:8px
+}
+.badge-discount {
+    background:#ff5f5f;
+    color:#fff;
+    padding:4px 8px;
+    border-radius:10px;
+    font-weight:700
+}
+.badge-cat{
+    background:#ffeab6;
+    color:#7a5400;
+    padding:4px 8px;
+    border-radius:10px
+}
+.pd-name{
+    margin:0 0 10px;
+    font-size:28px
+}
+.pd-price .price{
+    font-size:26px;
+    font-weight:800;
+    color:#111
+}
+.pd-qty{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:14px 0
+}
+.pd-qty button{
+    width:36px;
+    height:36px;
+    border:1px solid #ddd;
+    background:#fff;
+    border-radius:10px;
+    cursor:pointer
+}
+.pd-qty input{
+    width:66px;
+    height:36px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    text-align:center
+}
+.pd-meta{
+    list-style:none;
+    padding:0;
+    margin:0 0 12px;
+    color:#555;
+    display:grid;
+    gap:4px
+}
+/* ====== LƯỚI SẢN PHẨM ====== */
+.related .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+/* ====== CARD SẢN PHẨM ====== */
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #f4e9b8;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.25s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(247,181,0,0.25);
+    border-color: #f7b500;
+}
+
+/* ẢNH SẢN PHẨM */
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* TÊN & GIÁ */
+.product-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 6px;
+    min-height: 44px;
+}
+
+.product-card .price {
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* ===== NÚT MUA NGAY ===== */
+.product-card .btn-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.product-card .btn-buy {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #f7b500, #ffd75c);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(247, 181, 0, 0.25);
+    transition: all 0.25s ease;
+}
+
+.product-card .btn-buy:hover {
+    background: linear-gradient(90deg, #e6a200, #ffb700);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(247, 181, 0, 0.35);
+}
+
+.product-card .btn-buy:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(247, 181, 0, 0.2);
+}
+
+
+/* ===== NHÓM NÚT ===== */
+.pd-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+/* ===== NÚT CƠ BẢN ===== */
+.pd-actions button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1.8px solid #f7b500; /* viền vàng */
+    background-color: #fff;       /* nền trắng */
+    color: #f7b500;               /* chữ vàng */
+    transition: all 0.25s ease;
+}
+
+/* Hover: chuyển vàng nhẹ */
+.pd-actions button:hover {
+    background-color: #f7b500;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Riêng nút "Thêm vào giỏ" – hơi đậm hơn */
+.btn-cart {
+    background-color: #fff;
+}
+.btn-cart:hover {
+    background-color: #e6a200;
+    border-color: #e6a200;
+}
+
+/* Nút "Mua ngay" – cùng style, chỉ khác màu khi hover */
+.btn-buy:hover {
+    background-color: #f7b500;
+    border-color: #f7b500;
+    color: #fff;
+}
+
+/* Nút "Yêu thích" có trái tim */
+.btn-fav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-fav::before {
+    content: "♡";
+    font-size: 16px;
+    line-height: 1;
+    color: #f7b500;
+    transition: all 0.25s ease;
+}
+
+/* Khi được chọn (active) */
+.btn-fav.active {
+    background-color: #f7b500;
+    color: #fff;
+    border-color: #f7b500;
+}
+.btn-fav.active::before {
+    content: "❤";
+    color: #fff;
+}
+/* ===== KHUNG NỘI DUNG ĐẸP, TINH TẾ ===== */
+.info-block {
+    background: #fffdf8; /* nền vàng kem nhạt cho cảm giác ấm */
+    border-left: 4px solid #f7b500; /* chỉ có viền trái màu mật ong */
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    transition: all 0.25s ease;
+}
+
+/* Khi hover, khung sáng hơn một chút */
+.info-block:hover {
+    background: #fff9e5;
+    transform: translateY(-1px);
+}
+
+/* Tiêu đề */
+.info-block h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icon emoji trong tiêu đề (hoa, ống nghiệm...) */
+.info-block h2::before {
+    content: "🍯";
+    font-size: 18px;
+}
+
+/* Danh sách mô tả */
+.info-block ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.info-block li {
+    margin-bottom: 6px;
+}
+
+/* Gạch ngăn mảnh giữa các phần */
+.pd-info hr {
+    border: none;
+    border-top: 1px dashed #f1d27c;
+    margin: 28px 0;
+}
+
+/* ====== PHẦN SẢN PHẨM LIÊN QUAN ====== */
+.related {
+    margin-top: 60px;
+    background: #fffdf8;
+    border-radius: 18px;
+    padding: 40px 50px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.related h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.related h3::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #f7b500;
+    border-radius: 2px;
+    margin-top: 6px;
+}
