@@ -18,18 +18,12 @@ body {
     padding: 6px 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* chia đều 2 bên */
 }
 
 .topbar-links {
     display: flex;
     align-items: center;
     gap: 16px;
-}
-
-@keyframes blinkText {
-    0%, 100% { opacity: 1; color: #fff9e6; }
-    50% { opacity: 0.6; color: #ffe082; }
 }
 
 .topbar-links a {
@@ -39,10 +33,6 @@ body {
     font-weight: 600;
     animation: blinkText 2.5s ease-in-out infinite;
 }
-
-.topbar-links a:nth-child(1) { animation-delay: 0s; }
-.topbar-links a:nth-child(2) { animation-delay: 0.5s; }
-.topbar-links a:nth-child(3) { animation-delay: 1s; }
 
 
 .topbar .welcome {
@@ -60,7 +50,6 @@ body {
     100% { background-position: -200% 0; }
 }
 
-
 header{
     background:#fff;
     border-bottom:2px solid #d8c08a;
@@ -73,7 +62,6 @@ header{
     grid-template-columns:auto 1fr auto;
     align-items:center;
     column-gap:24px;
-    height:84px;  }
 
 .logo {
     display: flex;
@@ -114,28 +102,6 @@ header{
     font-weight: 600;
 }
 
-
-.search-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-.search-box input {
-    width: 50%;
-    padding: 8px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
-.search-box button {
-    margin-left: 5px;
-    background: #f7b500;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
 .main-nav{
     display: flex;
     align-items: center;
@@ -159,15 +125,11 @@ header{
     transition: all .3s ease;
 }
 
-
 .main-nav a:hover {
     color: #f7b500;
     transform: translateY(-2px);
 }
 
-.main-nav .cart .cart-text.active{
-    color:#f7b500 !important;
-    font-weight:700;
 }
 
 .main-nav a::after {
@@ -189,18 +151,8 @@ header{
 
 .cart {
     position: relative;
-    font-size: 15px;
 }
 
-.cart .badge {
-    position: absolute;
-    top: -6px;
-    right: -10px;
-    background: #000;
-    color: #fff;
-    border-radius: 99px;
-    padding: 2px 6px;
-    font-size: 11px;
 }
 
 .cart::after {
@@ -220,131 +172,38 @@ header{
     transform: translateX(-50%) scaleX(1);
 }
 
-.account-menu {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.account-menu a {
-    font-size: 14px;
-    color: #222;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.account-menu a:hover {
-    color: #f7b500;
-    transform: translateY(-1px);
-}
-
-.cart {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: 600;
-    color: #222;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cart:hover {
-    color: #f7b500;
-    transform: translateY(-1px);
-}
-
 .cart-text {
-    font-size: 14px;
 }
 
 .badge {
     position: absolute;
-    top: -6px;
     right: -10px;
     background-color: #000;
     color: #fff;
-    font-size: 11px;
     font-weight: 600;
     border-radius: 50%;
-    padding: 2px 5px;
 }
 
 @media (max-width: 992px){
     .header-inner{ grid-template-columns:1fr auto; row-gap:10px; }
-    .spacer{ display:none; }
     .logo img{ width:140px; }
     .main-nav{ gap:18px; }
 }
-.cart {
     position: relative;
-    font-size: 20px;
 }
-.cart .badge {
+
     position: absolute;
-    top: -5px;
-    right: -8px;
-    background: black;
-    color: white;
-    border-radius: 50%;
-    padding: 1px 5px;
-    font-size: 12px;
-}
-.cart {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 700;
-    color: #222;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
 }
 
-.cart:hover {
-    color: #f7b500;
-    transform: translateY(-2px);
-}
-
-.cart-text {
-    font-size: 15px;
-}
-
-.badge {
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    border-radius: 50%;
-    padding: 3px 6px;
-}
-
-
-.banner {
-    position: relative;
-    background-image: url("banner-xuann-nguyen.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    image-rendering: crisp-edges;
-    -webkit-image-rendering: optimize-contrast;
-    height: 180px;
-    border-bottom: 2px solid #d8c08a;
 }
 
-
-.banner::before{
-    content:"";
-    position:absolute; inset:0;
-    background:
-            linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.35));
 }
 
 .banner-inner {
     position: relative;
-    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
@@ -373,19 +232,15 @@ header{
 }
 
 @media (max-width: 992px){
-    .banner{ height: 260px; }
     .banner-inner h2{ font-size: 36px; }
     .banner-inner p{ font-size: 16px; }
 }
 @media (max-width: 600px) {
     .banner {
-        height: 220px;
     }
-
     .banner-inner h2 {
         font-size: 28px;
     }
-
     .banner-inner p {
         font-size: 14px;
     }
@@ -1061,4 +916,3 @@ footer {
     font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.04);
     padding-top: 14px;
-}
