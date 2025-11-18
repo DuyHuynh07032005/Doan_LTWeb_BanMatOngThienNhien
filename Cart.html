@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Honey Bee | Giỏ hàng</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+<script src="Cart.js" defer></script>
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="welcome">Chào mừng bạn đến với website bán mật ong thiên nhiên của nhóm 19</span>
+    <div class="topbar-links">
+      <a href="#">Thông báo</a>
+      <a href="#">Hỗ trợ</a>
+      <a href="#">Đăng nhập</a>
+      <a href="#">Đăng ký</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <img src="logo-honeybee.png" alt="Honey Bee Logo">
+      <div class="logo-text">
+        <h1>HONEY <span>BEE</span></h1>
+        <p>Mật ong nguyên chất</p>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <nav class="main-nav">
+      <a href="index.html">Trang chủ</a>
+      <a href="Products.html">Sản phẩm</a>
+      <a href="#">Blog / Tin tức</a>
+      <a href="#">Giới thiệu</a>
+      <a href="#">Liên hệ</a>
+
+      <a href="Cart.html" class="cart active" id="cartIcon" aria-label="Mở giỏ hàng">
+        🛒 <span class="cart-text">Giỏ hàng</span>
+        <span id="cartBadge" class="badge">0</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<section class="banner">
+  <div id="slide-container" class="slide-container">
+  </div>
+  <div class="banner-inner">
+  </div>
+  <div id="dots-container" class="dots-container">
+  </div>
+</section>
+
+<main class="cart-modern">
+  <div class="fs-card" aria-live="polite">
+    <div class="fs-top">
+      <span class="bee-dot"></span>
+      <strong>Miễn phí vận chuyển cho đơn từ 500.000₫</strong>
+    </div>
+    <div class="fs-bar">
+      <div class="fs-fill" style="width: 0%"></div>
+    </div>
+    <div class="fs-note">Mua thêm <b>500.000₫</b> để được freeship.</div>
+  </div>
+
+  <div class="grid">
+    <section class="card list">
+      <!-- toolbar -->
+      <div class="toolbar">
+        <label class="chk"><input type="checkbox" id="selectAll"> Chọn tất cả</label>
+        <button class="link danger" id="bulkDelete">Xóa đã chọn</button>
+      </div>
+
+
+      <section class="addon card bundle-card">
+        <div class="addon-head">
+          <h5>Mua kèm giá tốt</h5>
+          <span class="hint">Tiết kiệm đến 15%</span>
+        </div>
+        <div class="bundle-grid">
+          <!-- bundle 1 -->
+          <article class="bundle-item"
+                   data-id="bk1"
+                   data-name="Combo 2 hũ sáp ong 200gr"
+                   data-price="159000"
+                   data-image="assets/img/p10.jpg">
+            <img src="assets/img/p10.jpg" alt="Combo sáp ong 200gr">
+            <div class="b-meta">
+              <p class="b-name">Combo 2 hũ sáp ong 200gr</p>
+              <p class="b-price"><b>159.000₫</b> <s>189.000₫</s></p>
+            </div>
+            <button class="btn add bundle-add" type="button">Thêm</button>
+          </article>
+
+          <!-- bundle 2 -->
+          <article class="bundle-item"
+                   data-id="bk2"
+                   data-name="Mật ong hoa nhãn 500ML"
+                   data-price="175000"
+                   data-image="assets/img/p3.png">
+            <img src="assets/img/p3.png" alt="Mật ong hoa nhãn 500ML">
+            <div class="b-meta">
+              <p class="b-name">Mật ong hoa nhãn 500ML</p>
+              <p class="b-price"><b>175.000₫</b> <s>195.000₫</s></p>
+            </div>
+            <button class="btn add bundle-add" type="button">Thêm</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Lịch giao hàng -->
+      <section class="addon card schedule-card">
+        <div class="addon-head">
+          <h5>Chọn lịch giao hàng</h5>
+          <span class="hint">Ưu tiên giao trong giờ bạn rảnh</span>
+        </div>
+        <div class="schedule-grid">
+          <label>
+            Ngày giao
+            <input type="date" id="shipDate" min="">
+          </label>
+          <label>
+            Khung giờ
+            <select id="shipSlot">
+              <option value="Sáng (8:00–11:00)">Sáng (8:00–11:00)</option>
+              <option value="Trưa (11:00–13:30)">Trưa (11:00–13:30)</option>
+              <option value="Chiều (13:30–17:30)">Chiều (13:30–17:30)</option>
+              <option value="Tối (18:30–21:00)">Tối (18:30–21:00)</option>
+            </select>
+          </label>
+          <button class="btn save-slot" type="button">Lưu lịch</button>
+          <p class="slot-note" id="shipSaved" hidden></p>
+        </div>
+      </section>
+
+      <!-- Đã xem gần đây -->
+      <section class="addon card recent-card">
+        <div class="addon-head">
+          <h5>Đã xem gần đây</h5>
+          <a class="sug-more" href="Products.html">Xem thêm →</a>
+        </div>
+        <div class="recent-grid" id="recentList">
+          <!-- sẽ render từ JS; fallback: -->
+          <p class="mute" id="recentEmpty">Bạn chưa xem sản phẩm nào.</p>
+        </div>
+      </section>
+
+      <!-- FAQ mini -->
+      <section class="addon card faq-card">
+        <div class="addon-head">
+          <h5>FAQ nhanh</h5>
+        </div>
+        <details>
+          <summary>Phí vận chuyển tính sao?</summary>
+          <p>Đơn &ge; 500.000₫: <b>miễn phí</b>. Dưới ngưỡng: Tiêu chuẩn 30.000₫, Hỏa tốc 55.000₫.</p>
+        </details>
+        <details>
+          <summary>Đổi trả trong bao lâu?</summary>
+          <p>Đổi trả trong 7 ngày nếu còn tem, chưa mở nắp. Liên hệ hỗ trợ để được xử lý nhanh.</p>
+        </details>
+        <details>
+          <summary>Thanh toán có an toàn không?</summary>
+          <p>Website dùng mã hóa SSL và cổng thanh toán bảo mật. Bạn có thể chọn COD khi nhận hàng.</p>
+        </details>
+      </section>
+
+
+
+    </section>
+    <!-- /LIST -->
+
+    <!-- Khung giỏ trống -->
+    <div id="cartEmpty" hidden class="empty-cart">
+      🛒 Giỏ hàng trống. <a href="Products.html">Tiếp tục mua sắm</a>
+    </div>
+
+    <!-- SUMMARY -->
+    <aside class="card summary">
+      <h4>Tóm tắt đơn hàng</h4>
+
+      <div class="ship">
+        <label class="ship-card">
+          <input type="radio" name="ship" value="standard" checked>
+          <div class="ship-body">
+            <div class="ship-title">Tiêu chuẩn</div>
+            <div class="ship-note">3–5 ngày • 30.000₫</div>
+          </div>
+        </label>
+        <label class="ship-card">
+          <input type="radio" name="ship" value="express">
+          <div class="ship-body">
+            <div class="ship-title">Hỏa tốc</div>
+            <div class="ship-note">Trong ngày • 55.000₫</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="voucher">
+        <input type="text" placeholder="Nhập mã: HONEY10 / FREESHIP">
+        <button class="btn pill" type="button">Áp dụng</button>
+      </div>
+
+      <div class="pay">
+        <h5>Phương thức thanh toán</h5>
+
+        <label class="pay-card">
+          <input type="radio" name="pay" value="cod" checked>
+          <div class="pay-body">
+            <div class="pay-title">Tiền mặt (COD)</div>
+            <div class="pay-note">Thanh toán khi nhận hàng – không phụ phí</div>
+          </div>
+        </label>
+
+        <label class="pay-card">
+          <input type="radio" name="pay" value="bank">
+          <div class="pay-body">
+            <div class="pay-title">Chuyển khoản ngân hàng</div>
+            <div class="pay-note">Miễn phí – hiển thị thông tin tài khoản sau khi chọn</div>
+          </div>
+        </label>
+        <div class="pay-detail" id="bankDetail" hidden>
+          <div class="bank-list">
+            <label><input type="radio" name="bank" value="VCB" checked> Vietcombank</label>
+            <label><input type="radio" name="bank" value="TCB"> Techcombank</label>
+            <label><input type="radio" name="bank" value="MB"> MB Bank</label>
+          </div>
+          <div class="bank-info" id="bankInfo">
+            <p><b>Chủ TK:</b> NGUYEN HONEY BEE</p>
+            <p><b>STK:</b> 0123 456 789 (Vietcombank – CN Tân Định)</p>
+            <p><b>Nội dung CK:</b> <code>HB-{{SĐT}}-{{Mã đơn}}</code></p>
+          </div>
+        </div>
+
+        <label class="pay-card">
+          <input type="radio" name="pay" value="wallet">
+          <div class="pay-body">
+            <div class="pay-title">Ví điện tử</div>
+            <div class="pay-note">MoMo / ZaloPay / VNPay (ưu đãi -5.000đ)</div>
+          </div>
+        </label>
+        <div class="pay-detail" id="walletDetail" hidden>
+          <div class="wallet-logos" aria-label="Ví điện tử hỗ trợ">
+            <span class="w momo">MoMo</span>
+            <span class="w zalo">ZaloPay</span>
+            <span class="w vnpay">VNPay</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="row-2"><span>Tạm tính</span><b>0₫</b></div>
+        <div class="row-2"><span>Vận chuyển</span><b>0₫</b></div>
+        <div class="row-2 mute"><span>Giảm giá</span><b>0₫</b></div>
+        <hr>
+        <div class="row-2 total"><span>Thành tiền</span><b>0₫</b></div>
+      </div>
+
+      <button class="btn primary xl w100" id="btnCheckout" type="button">
+        <span class="lock">🔒</span> Thanh toán an toàn
+      </button>
+
+      <div class="secure">
+        <span class="dot"></span> Mã hóa SSL • Thanh toán bảo mật
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Liên hệ chúng tôi</h4>
+      <p>Địa chỉ: Khu phố 6, Thủ Đức, Thành phố Hồ Chí Minh</p>
+      <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+      <p>Email: <a href="mailto:info@honeybee.vn">info@honeybee.vn</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Chính sách</h4>
+      <ul>
+        <li><a href="#">Chính sách vận chuyển</a></li>
+        <li><a href="#">Chính sách đổi trả</a></li>
+        <li><a href="#">Điều khoản sử dụng</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Về chúng tôi</h4>
+      <ul>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Lĩnh vực hoạt động</a></li>
+        <li><a href="#">Triết lý kinh doanh</a></li>
+        <li><a href="#">Cơ sở vật chất</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Đăng ký nhận ưu đãi</h4>
+      <p>Nhập email để nhận khuyến mãi mới nhất và tin tức từ HONEY BEE.</p>
+      <form class="subscribe-form" action="#" onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi đã nhận email của bạn.');">
+        <input type="email" name="email" placeholder="Email của bạn" required>
+        <button type="submit">Đăng ký</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
+</footer>
+<div id="cartAlert">🛒 Đã thêm vào giỏ hàng!</div>
+</body>
+</html>
