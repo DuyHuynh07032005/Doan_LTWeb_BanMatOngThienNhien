@@ -227,7 +227,7 @@ header{
     overflow: hidden;
     height: 280px;
     border-bottom: 2px solid #d8c08a;
-    background-image: url("banner-xuann-nguyen.webp");
+    background-image: none;
 }
 
 /* Định kiểu cho Slide Container */
