@@ -6,7 +6,7 @@
     function getActiveBanners() {
         // ⚠️ THAY THẾ CÁC ĐƯỜNG DẪN ẢNH NÀY BẰNG ẢNH THỰC TẾ CỦA BẠN ⚠️
         const fixedBanners = [
-            "images/banner1.jpg", // Ảnh Cố định 1 (24/24)
+            "images/banner.jpg", // Ảnh Cố định 1 (24/24)
             "images/banner2.jpg"  // Ảnh Cố định 2 (24/24)
         ];
 

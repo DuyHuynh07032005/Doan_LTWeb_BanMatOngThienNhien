@@ -54,7 +54,7 @@
       <h2>Đăng nhập</h2>
       <p>Vui lòng nhập thông tin để tiếp tục</p>
 
-      <form onsubmit="event.preventDefault(); alert('Đăng nhập thành công!');">
+      <form onsubmit="loginUser(event)">
         <div class="form-group">
           <label for="email">Email hoặc Tên đăng nhập</label>
           <input type="text" id="email" name="email" placeholder="Nhập email hoặc tên đăng nhập" required>
@@ -131,5 +131,6 @@
 
     <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
   </footer>
+  <script src="jsLogin.js"></script>
 </body>
 </html>

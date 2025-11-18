@@ -17,8 +17,8 @@
         <div class="topbar-links">
             <a href="#">Tài khoản</a>
             <a href="#">Thanh toán</a>
-            <a href="#">Đăng nhập</a>
-            <a href="#">Đăng ký</a>
+            <a href="http://127.0.0.1:5500/login.html">Đăng nhập</a>
+            <a href="http://127.0.0.1:5500/signup.html">Đăng ký</a>
         </div>
     </div>
   </div>
@@ -49,12 +49,18 @@
   </header>
 
   <!-- Banner giới thiệu -->
-  <section class="about-banner">
-    <div class="banner-content">
-      <h1>Giới thiệu về HONEY BEE</h1>
-      <p>Chất lượng tạo nên thương hiệu - Uy tín tạo dựng niềm tin</p>
-    </div>
-  </section>
+ <section class="banner">
+  <div id="slide-container" class="slide-container"></div>
+  <div class="banner-inner"></div>
+  <div id="dots-container" class="dots-container"></div>
+
+  <!-- Text overlay giống about-banner -->
+  <div class="banner-text">
+    <h1>Giới thiệu về HONEY BEE</h1>
+    <p>Chất lượng tạo nên thương hiệu - Uy tín tạo dựng niềm tin</p>
+  </div>
+</section>
+
 
   <!-- Nội dung giới thiệu -->
   <main class="about-content">
@@ -259,5 +265,6 @@
 
     <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
   </footer>
+  <script src="jsbanner.js"></script>
 </body>
 </html>

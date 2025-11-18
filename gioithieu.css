@@ -1,39 +1,362 @@
-/* Banner giới thiệu */
-.about-banner {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.32)), url('images/banner.jpg');
-  background-size: cover; /* ảnh phủ đầy khung và crop hợp lý */
-  background-position: center center; 
-  background-repeat: no-repeat;
-  height: 60vh;
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-  padding: 0 18px;
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: #fffef8;
+    color: #333;
 }
 
-.banner-content {
-  max-width: 900px;
-  padding: 0 20px;
+/* --- Top Bar --- */
+.topbar {
+    background: #f7b500;
+    color: #fff9e6;
+    font-weight: 600;
+    font-size: 14px;
 }
 
-.banner-content h1 {
-  font-size: 48px;
-  margin-bottom: 14px;
-  line-height: 1.05;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.45);
+.topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.banner-content p {
-  font-size: 20px;
-  opacity: 0.95;
+.topbar-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-/* Nếu vô tình chèn img trong banner-content, ẩn nó - dùng background thay thế */
-.about-banner .banner-content img {
-  display: none;
+.topbar-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.95;
+    font-weight: 600;
+    /* Giữ lại animation nếu muốn */
+    animation: blinkText 2.5s ease-in-out infinite;
+}
+
+@keyframes blinkText {
+    0%, 100% { opacity: 1; color: #fff9e6; }
+    50% { opacity: 0.6; color: #ffe082; }
+}
+
+.topbar .welcome {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #fff 0%, #fff 30%, #ffe082 50%, #fff 70%, #fff 100%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* --- Header --- */
+header{
+    background:#fff;
+    border-bottom:2px solid #d8c08a;
+}
+.header-inner{
+    max-width:1200px;
+    margin:0 auto;
+    padding:6px 24px;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    column-gap:24px;
+    height:84px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: auto;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.logo img {
+    max-height: 84px;
+    width: auto;
+    object-fit: contain;
+    transform-origin: left center;
+}
+
+.logo-text {
+    line-height: 1.05;
+}
+
+.logo-text h1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin: 0;
+    color: #111;
+    letter-spacing: 0.6px;
+}
+
+.logo-text span {
+    color: #f7b500;
+}
+
+.logo-text p {
+    font-size: 0.7rem;
+    color: #555;
+    margin: 2px 0 0 0;
+    font-weight: 600;
+}
+
+.main-nav{
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    height: 60px;
+}
+
+.main-nav a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #222;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1;
+    padding: 6px 0;
+    white-space: nowrap;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.main-nav a:hover {
+    color: #f7b500;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    color: #f7b500;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    background-color: #f7b500;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.main-nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+gap: 6px;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.cart:hover {
+    color: #f7b500;
+    transform: translateY(-2px);
+}
+
+.cart::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    background-color: #f7b500;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.cart:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.cart-text {
+    font-size: 15px;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 3px 6px;
+}
+
+@media (max-width: 992px){
+    .header-inner{ grid-template-columns:1fr auto; row-gap:10px; }
+    .logo img{ width:140px; }
+    .main-nav{ gap:18px; }
+}
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-bottom: 2px solid #d8c08a;
+    background-image: none; /* Quan trọng: loại bỏ ảnh nền tĩnh */
+}
+
+/* Định kiểu cho Slide Container */
+.slide-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Định kiểu cho từng Slide */
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0; /* Mặc định ẩn */
+    transition: opacity 1s ease-in-out; /* Hiệu ứng mờ dần */
+}
+
+.banner-slide.active {
+    opacity: 1; /* Hiển thị slide đang hoạt động */
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* chữ màu trắng */
+    text-align: center;
+    z-index: 20; /* cao hơn slide */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5); /* làm nổi chữ trên ảnh */
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Cần đảm bảo lớp phủ và nội dung chữ ở trên các slide */
+.banner-inner {
+    position: relative;
+    z-index: 10; /* Tăng z-index để nằm trên slide */
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 16px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.banner-inner h2 {
+    margin: 0 0 6px;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.banner-inner p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+/* Định kiểu cho các chấm điều hướng (Dots) */
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #f7b500; /* Màu vàng khi active */
+    border: 1px solid white;
+}
+
+
+@media (max-width: 992px){
+    .banner{ height: 350px; }
+    .banner-inner h2{ font-size: 36px; }
+    .banner-inner p{ font-size: 16px; }
+}
+@media (max-width: 600px) {
+    .banner {
+        height: 280px;
+    }
+    .banner-inner h2 {
+        font-size: 28px;
+    }
+    .banner-inner p {
+        font-size: 14px;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 /* Nội dung giới thiệu */

@@ -87,13 +87,13 @@ header{
     display: flex;
     align-items: center;
     gap: 16px;
-    height: 84px;
+    height: auto;
     margin-left: 20px;
     overflow: hidden;
 }
 
 .logo img {
-    height: 130px;
+    max-height: 84px;
     width: auto;
     object-fit: contain;
     transform-origin: left center;
@@ -232,7 +232,7 @@ header{
 .banner {
     position: relative;
     overflow: hidden;
-    height: 280px;
+    height: 350px;
     border-bottom: 2px solid #d8c08a;
     background-image: none; /* Quan trọng: loại bỏ ảnh nền tĩnh */
 }
@@ -580,6 +580,7 @@ footer {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   gap: 30px;
   justify-content: space-between;
   align-items: flex-start;
@@ -634,7 +635,7 @@ footer {
   padding: 10px 12px;
   border-radius: 6px;
   border: none;
-  min-width: 220px;
+  width: 220px;
 }
 
 .subscribe-form button {
@@ -657,23 +658,11 @@ footer {
   padding-top: 14px;
 }
 
-/*  */
-.banner {
-  height: 60vh;
-}
+
 
 .banner-text h1 {
   font-size: 44px;
 }
-
-.product-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.blog-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .navbar {
   flex-direction: row;
   align-items: center;
@@ -685,23 +674,13 @@ footer {
   gap: 25px;
 }
 
-.logo img {
-  height: 48px;
-}
 
-.footer-container {
-  flex-direction: row;
-  gap: 30px;
-}
 
 .subscribe-form {
   flex-direction: row;
   align-items: flex-start;
 }
 
-.subscribe-form input[type="email"] {
-  width: 220px;
-}
 
 /* Nút Xem thêm dưới danh mục */
 .more-categories {
