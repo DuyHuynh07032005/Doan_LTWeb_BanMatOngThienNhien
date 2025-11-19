@@ -14,8 +14,8 @@
     <div class="topbar-inner">
         <span class="welcome">Chào mừng bạn đến với website bán mật ong thiên nhiên của nhóm 19</span>
         <div class="topbar-links">
-            <a href="#">Tài khoản</a>
-            <a href="#">Thanh toán</a>
+            <a href="#">Thông báo</a>
+            <a href="#">Hỗ trợ</a>
             <a href="http://127.0.0.1:5500/login.html">Đăng nhập</a>
             <a href="http://127.0.0.1:5500/signup.html">Đăng ký</a>
         </div>
@@ -242,7 +242,25 @@
     });
   </script>
   <script src="jsbanner.js"></script>
-  <script src="jsLogin.js"></script>  
+  <script src="jsLogin.js"></script>  \
+  // Nút Lên đầu trang
+  <button id="backToTop" title="Lên đầu trang">↑</button>
 
+        <script>
+
+            window.onscroll = function() {
+                const btn = document.getElementById("backToTop");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    btn.style.display = "block";
+                } else {
+                    btn.style.display = "none";
+                }
+            };
+
+
+            document.getElementById("backToTop").onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        </script>
 </body>
 </html>
