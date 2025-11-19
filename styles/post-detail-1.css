@@ -1,0 +1,125 @@
+/* PostDetail.css */
+
+.post-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* ĐÃ TĂNG PADDING TOP ĐỂ CÓ KHOẢNG TRỐNG KHI KHÔNG CÓ BANNER */
+    padding: 30px 16px 40px 16px;
+    display: grid;
+    /* Sử dụng lại layout 2 cột từ Blog.css */
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+/* Đảm bảo tiêu đề chính hiển thị rõ ràng */
+.post-main-content h1 {
+    font-size: 2.5rem;
+    color: #333; /* Chuyển màu tiêu đề thành màu tối */
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.post-meta-detail {
+    color: #777;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.post-body p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.post-body h2 {
+    margin-top: 30px;
+    font-size: 1.6rem;
+    color: #333;
+    border-left: 5px solid #f7b500;
+    padding-left: 15px;
+}
+
+.comment-section h3 {
+    border-bottom: 2px solid #f7b500;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+/* Định dạng blockquote (Bí quyết) */
+.tip-box {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: #fffde7;
+    border-left: 5px solid #f7b500;
+    font-style: italic;
+    color: #555;
+}
+
+/* Định dạng form bình luận */
+#comment-form .form-group {
+    margin-bottom: 15px;
+}
+#comment-form input[type="text"],
+#comment-form input[type="email"],
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background: #f7b500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #e5a700;
+}
+
+/* Phân tách sidebar cho responsive */
+@media (max-width: 768px) {
+    .post-detail-container {
+        grid-template-columns: 1fr;
+        padding-top: 20px; /* Giảm padding top trên mobile */
+    }
+}
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fcbf24;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background-color: #e0a800;
+    transform: scale(1.1);
+}
