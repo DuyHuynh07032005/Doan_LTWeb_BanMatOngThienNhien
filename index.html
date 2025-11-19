@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HONEY BEE - Trang chủ</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Topbar + Thanh điều hướng mới -->
+  <div class="topbar">
+    <div class="topbar-inner">
+        <span class="welcome">Chào mừng bạn đến với website bán mật ong thiên nhiên của nhóm 19</span>
+        <div class="topbar-links">
+            <a href="#">Thông báo</a>
+            <a href="#">Hỗ trợ</a>
+            <a href="http://127.0.0.1:5500/login.html">Đăng nhập</a>
+            <a href="http://127.0.0.1:5500/signup.html">Đăng ký</a>
+        </div>
+    </div>
+  </div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <img src="images/logo.png" alt="Honey Bee Logo">
+      <div class="logo-text">
+        <h1>HONEY <span>BEE</span></h1>
+        <p>Mật ong nguyên chất</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#" class="active">Trang chủ</a>
+      <a href="#">Sản phẩm</a>
+      <a href="#">Thanh toán</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="#">Blog / Tin tức</a>
+      <a href="Contact.html">Liên hệ</a>
+      <div class="cart">
+        🛒
+        <span class="cart-text">Giỏ hàng</span>
+        <span class="badge">0</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="banner">
+  <div id="slide-container" class="slide-container">
+  </div>
+  <div class="banner-inner">
+  </div>
+  <div id="dots-container" class="dots-container">
+  </div>
+</section>
+ 
+  <!-- Nội dung chính (Chào mừng) -->
+  <main class="intro">
+    <h1>Chào mừng đến với HONEY BEE</h1>
+    <p>🌿 Mật Ong Nguyên Chất – Chất lượng cao, nguồn gốc hoàn toàn tự nhiên!</p>
+    <a href="#categories" class="btn">Danh mục sản phẩm</a>
+  </main>
+
+  <!-- Categories (danh mục sản phẩm) -->
+  <section id="categories" class="categories">
+    <div class="container">
+      <h2>Danh mục sản phẩm</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="images/cat1.jpg" alt="Mật ong rừng">
+          <h4>Mật ong rừng</h4>
+        </div>
+
+        <div class="category-card">
+          <img src="images/cat2.jpg" alt="Mật ong hoa">
+          <h4>Mật ong hoa</h4>
+        </div>
+
+        <div class="category-card">
+          <img src="images/cat3.jpg" alt="Sáp ong">
+          <h4>Sáp ong</h4>
+        </div>
+
+        <div class="category-card">
+          <img src="images/cat4.jpg" alt="Phụ kiện">
+          <h4>Phụ kiện</h4>
+        </div>
+      </div>
+      <div class="more-categories">
+        <a class="btn btn-outline" href="#best-sellers">Xem thêm</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sản phẩm bán chạy (placeholder) -->
+  <section id="best-sellers" class="products">
+    <div class="container">
+      <h2>Sản phẩm bán chạy</h2>
+      <div class="products-slider">
+        <button class="slider-btn prev" aria-label="Xem trước">‹</button>
+        <div class="slider-window">
+          <div class="slider-track">
+            <article class="product-card">
+              <img src="images/prod1.jpg" alt="Sản phẩm 1">
+              <h3>Mật ong rừng</h3>
+              <p class="price">200.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+
+            <article class="product-card">
+              <img src="images/prod2.jpg" alt="Sản phẩm 2">
+              <h3>Sáp ong</h3>
+              <p class="price">180.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+
+            <article class="product-card">
+              <img src="images/prod3.jpg" alt="Sản phẩm 3">
+              <h3>Mật ong ruồi</h3>
+              <p class="price">220.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+
+            <article class="product-card">
+              <img src="images/prod3.jpg" alt="Sản phẩm 4">
+              <h3>Mật ong hoa rừng</h3>
+              <p class="price">210.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+
+            <article class="product-card">
+              <img src="images/prod3.jpg" alt="Sản phẩm 5">
+              <h3>Combo quà tặng</h3>
+              <p class="price">350.000đ</p>
+              <a href="#" class="buy-btn">Mua ngay</a>
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Xem sau">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog sectio -->
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <h2>Tin tức & Bài viết</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img src="images/loiich.webp" alt="Bài viết 1">
+          <h3>5 lợi ích của mật ong tự nhiên</h3>
+          <p class="excerpt">Tìm hiểu các công dụng sức khỏe của mật ong nguyên chất và cách sử dụng mỗi ngày để cải thiện sức khỏe gia đình.</p>
+          <a href="#" class="read-more">Đọc tiếp</a>
+        </article>
+
+        <article class="blog-card">
+          <img src="images/phanbiet.jpg" alt="Bài viết 2">
+          <h3>Cách phân biệt mật ong thật</h3>
+          <p class="excerpt">Mẹo nhận diện mật ong thật, tránh hàng giả và bảo quản đúng cách để giữ chất lượng.</p>
+          <a href="#" class="read-more">Đọc tiếp</a>
+        </article>
+      </div>
+      <div class="all-posts"><a href="#" class="btn">Xem tất cả bài viết</a></div>
+    </div>
+  </section>
+
+  <!-- Chân trang -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Liên hệ chúng tôi</h4>
+        <p>Địa chỉ: Khu phố 6, Thủ Đức, Thành phố Hồ Chí Minh</p>
+        <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+        <p>Email: <a href="mailto:info@honeybee.vn">info@honeybee.vn</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Chính sách</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Về chúng tôi</h4>
+        <ul>
+          <li><a href="gioithieu.html">Giới thiệu</a></li>
+          <li><a href="#">Lĩnh vực hoạt động</a></li>
+          <li><a href="#">Triết lý kinh doanh</a></li>
+          <li><a href="#">Cơ sở vật chất</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Đăng ký nhận ưu đãi</h4>
+        <p>Nhập email để nhận khuyến mãi mới nhất và tin tức từ HONEY BEE.</p>
+        <form class="subscribe-form" action="#" onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi đã nhận email của bạn.');">
+          <input type="email" name="email" placeholder="Email của bạn" required>
+          <button type="submit">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
+  </footer>
+  <script>
+    // Slider đơn giản cho phần Sản phẩm bán chạy
+    document.addEventListener('DOMContentLoaded', function() {
+      const track = document.querySelector('.slider-track');
+      const prev = document.querySelector('.slider-btn.prev');
+      const next = document.querySelector('.slider-btn.next');
+      if (!track || !prev || !next) return;
+      const cards = Array.from(track.children);
+      const visible = 3; // số sản phẩm hiển thị cùng lúc
+      let index = 0;
+
+      function update() {
+        const cardStyle = getComputedStyle(cards[0]);
+        const gap = parseInt(getComputedStyle(track).gap) || 18;
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const move = (cardWidth + gap) * index;
+        track.style.transform = 'translateX(-' + move + 'px)';
+        prev.disabled = index === 0;
+        next.disabled = index >= cards.length - visible;
+      }
+
+      prev.addEventListener('click', function() {
+        if (index > 0) { index--; update(); }
+      });
+
+      next.addEventListener('click', function() {
+        if (index < cards.length - visible) { index++; update(); }
+      });
+
+      window.addEventListener('resize', update);
+      // initial
+      setTimeout(update, 50);
+    });
+  </script>
+  <script src="jsbanner.js"></script>
+  <script src="jsLogin.js"></script>  \
+  // Nút Lên đầu trang
+  <button id="backToTop" title="Lên đầu trang">↑</button>
+
+        <script>
+
+            window.onscroll = function() {
+                const btn = document.getElementById("backToTop");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    btn.style.display = "block";
+                } else {
+                    btn.style.display = "none";
+                }
+            };
+
+
+            document.getElementById("backToTop").onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        </script>
+</body>
+</html>
