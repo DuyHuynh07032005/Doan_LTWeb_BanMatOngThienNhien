@@ -222,8 +222,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function getActiveBanners() {
         // ⚠️ THAY THẾ CÁC ĐƯỜNG DẪN ẢNH NÀY BẰNG ẢNH THỰC TẾ CỦA BẠN ⚠️
         const fixedBanners = [
-            "../assets/banner1.jpg", // Ảnh Cố định 1 (24/24)
-            "../assets/banner2.jpg"  // Ảnh Cố định 2 (24/24)
+            "../assets/banner1.webp", // Ảnh Cố định 1 (24/24)
+            "../assets/banner2.png"  // Ảnh Cố định 2 (24/24)
         ];
 
         // Khung giờ VÀNG (10:00 - 14:00)
