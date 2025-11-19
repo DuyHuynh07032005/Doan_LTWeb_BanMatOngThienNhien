@@ -1,0 +1,939 @@
+
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Honey Bee | Cửa hàng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Products.css">
+</head>
+<body>
+<script src="Products.js" defer></script>
+
+<div class="topbar">
+    <div class="topbar-inner">
+        <span class="welcome">Chào mừng bạn đến với website bán mật ong thiên nhiên của nhóm 19</span>
+        <div class="topbar-links">
+            <a href="#">Thông báo</a>
+            <a href="#">Hỗ trợ</a>
+            <a href="#">Đăng nhập</a>
+            <a href="#">Đăng ký</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="header-inner">
+        <!-- BRAND -->
+        <div class="logo">
+            <img src="logo-honeybee.png" alt="Honey Bee Logo">
+            <div class="logo-text">
+                <h1>HONEY <span>BEE</span></h1>
+                <p>Mật ong nguyên chất</p>
+            </div>
+        </div>
+
+        <!-- spacer tự co giãn, không cần để gì vào -->
+        <div class="spacer"></div>
+
+        <!-- NAV -->
+        <nav class="main-nav">
+            <a href="#">Trang chủ</a>
+            <a href="#" class="active">Sản phẩm</a>
+            <a href="#">Blog / Tin tức</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+            <a href="Cart.html" class="cart" id="cartIcon">
+                🛒 <span class="cart-text">Giỏ hàng</span>
+                <span id="cartBadge" class="badge">0</span>
+            </a>
+
+
+        </nav>
+    </div>
+</header>
+<section class="banner">
+    <div id="slide-container" class="slide-container">
+    </div>
+    <div class="banner-inner">
+    </div>
+    <div id="dots-container" class="dots-container">
+    </div>
+</section>
+<main>
+
+
+    <aside>
+        <h3>DANH MỤC SẢN PHẨM</h3>
+            <ul id="catList">
+                <li data-filter="all" class="is-active">Tất cả</li>
+                <li data-filter="mat-ong-chua">Mật ong Chúa Tươi <span>(50)</span></li>
+                <li data-filter="mat-ong-gung">Mật ong Gừng <span>(40)</span></li>
+                <li data-filter="hoa-ca-phe">Mật ong Hoa Cà Phê <span>(44)</span></li>
+                <li data-filter="hoa-nhan">Mật ong Hoa Nhãn <span>(31)</span></li>
+                <li data-filter="sua-chua">Mật ong Sữa Chúa <span>(24)</span></li>
+                <li data-filter="bac-ha">Mật ong Hoa Bạc Hà <span>(13)</span></li>
+                <li data-filter="hoa-rung">Mật ong Hoa Rừng <span>(29)</span></li>
+                <li data-filter="hoa-trang">Mật ong Hoa Trắng <span>(16)</span></li>
+                <li data-filter="banh-to">Mật ong Bánh Tổ <span>(14)</span></li>
+                <li data-filter="gift">Hộp quà Tết Cao Cấp <span>(34)</span></li>
+                <li data-filter="gift">Set quà tặng <span>(25)</span></li>
+            </ul>
+        </aside>
+
+    </aside>
+
+
+    <section class="product-list">
+        <div class="product"
+             data-id="p1"
+             data-cat="bac-ha"
+             data-name="Mật ong Hoa Bạc Hà Thảo Mộc chai 600ML"
+             data-price="120000"
+             data-image="assets/img/p1.png">
+            <img src="assets/img/p1.png" alt="Mật ong Honey Bee">
+            <span class="discount">50%</span>
+            <p class="name">Mật ong Hoa Bạc Hà Thảo Mộc chai 600ML</p>
+            <p class="price"><del>250.000đ</del> <b>120.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p2"
+             data-cat="bac-ha"
+             data-name="Mật ong Hoa Bạc Hà Mèo Vạc Hà Giang hũ 200MLL"
+             data-price="132000"
+             data-image="assets/img/p2.jpg">
+            <img src="assets/img/p2.jpg" alt="Mật ong Honey Bee">
+            <p class="name">Mật ong Hoa Bạc Hà Mèo Vạc Hà Giang hũ 200ML</p>
+            <p class="price"><b>132.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p3"
+             data-cat="bac-ha"
+             data-name="Mật ong Hoa Bạc Hà hũ 389ML"
+             data-price="210000"
+             data-image="assets/img/p3.png">
+            <img src="assets/img/p3.png" alt="Mật ong Honey Bee">
+            <span class="discount">-11%</span>
+            <p class="name">Mật ong Hoa Bạc Hà hũ 389ML</p>
+            <p class="price"><del>260.000đ</del> <b>210.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p4"
+             data-cat="hoa-trang"
+             data-name="Mật ong Hoa Trắng Thảo Mộc chai 600ML"
+             data-price="280000"
+             data-image="assets/img/p4.jpg">
+            <img src="assets/img/p4.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-18%</span>
+            <p class="name">Mật ong Hoa Trắng Thảo Mộc chai 600ML</p>
+            <p class="price"><del>350.000đ</del> <b>280.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p5"
+             data-cat="hoa-trang"
+             data-name="Mật ong Hoa Trắng Cang Chải Yên Bái chai 1L"
+             data-price="320000"
+             data-image="assets/img/p5.jpg">
+            <img src="assets/img/p5.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-29%</span>
+            <p class="name">Mật ong Hoa Trắng Cang Chải Yên Bái chai 1L</p>
+            <p class="price"><del>450.000đ</del> <b>320.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p6"
+             data-cat="hoa-rung"
+             data-name="Mật ong Hoa Rừng Sơn La loại 600ML"
+             data-price="380000"
+             data-image="assets/img/p6.png">
+            <img src="assets/img/p6.png" alt="Mật ong Honey Bee">
+            <p class="name">Mật ong Hoa Rừng Sơn La loại 600ML</p>
+            <p class="price"><b>380.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p7"
+             data-cat="hoa-rung"
+             data-name="Mật ong Hoa Rừng Sơn La loại 1L"
+             data-price="300000"
+             data-image="assets/img/p7.jpg">
+            <img src="assets/img/p7.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-10%</span>
+            <p class="name">Mật ong Hoa Rừng Sơn La loại 1L </p>
+            <p class="price"><del>320.000đ</del> <b>300.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p8"
+             data-name="Mật ong Kim Sơn Ninh Bình chai 600ML"
+             data-price="310000"
+             data-image="assets/img/p8.jpg">
+            <img src="assets/img/p8.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-30%</span>
+            <p class="name">Mật ong Kim Sơn Ninh Bình chai 600ML</p>
+            <p class="price"><del>400.000đ</del> <b>310.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p9"
+             data-cat="banh-to"
+             data-name="Mật Ong Bánh Tổ Thảo Mộc Hộp 250g"
+             data-price="375000"
+             data-image="assets/img/p9.jpg">
+            <img src="assets/img/p9.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Mật Ong Bánh Tổ Thảo Mộc Hộp 250gr</p>
+            <p class="price"><del>400.000đ</del> <b>375.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p10"
+             data-cat="banh-to"
+             data-name="Mật Ong Bánh Tổ Thảo Mộc Hộp 600gr"
+             data-price="299000"
+             data-image="assets/img/p10.jpg">
+            <img src="assets/img/p10.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-50%</span>
+            <p class="name">Mật Ong Bánh Tổ Thảo Mộc Hộp 600gr</p>
+            <p class="price"><del>600.000đ</del> <b>299.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p11"
+             data-cat="banh-to"
+             data-name="Mật Ong Bánh Tổ Thảo Mộc Hộp 600gr"
+             data-price="345000"
+             data-image="assets/img/p11.jpg">
+            <img src="assets/img/p11.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Mật Ong Bánh Tổ Thảo Mộc Hộp 600gr</p>
+            <p class="price"><del>450.000đ</del> <b>345.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p12"
+             data-cat="mat-ong-gung"
+             data-name="Mật ong gừng nguyên chất 500ml"
+             data-price="465000"
+             data-image="assets/img/p12.jpg">
+            <img src="assets/img/p12.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Mật ong rừng nguyên chất 500ml</p>
+            <p class="price"><del>500.000đ</del> <b>465.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p13"
+             data-cat="banh-to"
+             data-name="Mật ong Bánh Tổ Thảo Mộc Hộp 330GR"
+             data-price="276000"
+             data-image="assets/img/p13.jpg">
+            <img src="assets/img/p13.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Mật ong Bánh Tổ Thảo Mộc Hộp 330GR</p>
+            <p class="price"><del>300.000đ</del> <b>276.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p9.2"
+             data-cat="mat-ong-gung"
+             data-name="Mật ong gừng nguyên chất 700ml"
+             data-price="473000"
+             data-image="assets/img/p9.2.jpg">
+            <img src="assets/img/p9.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Mật ong gừng nguyên chất 700ml</p>
+            <p class="price"><del>500.000đ</del> <b>473.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p9.3"
+             data-cat="mat-ong-gung"
+             data-name="Mật ong gừng nguyên chất 1L"
+             data-price="320000"
+             data-image="assets/img/p9.3.jpg">
+            <img src="assets/img/p9.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Mật ong gừng nguyên chất 1L</p>
+            <p class="price"><del>350.000đ</del> <b>320.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p14"
+             data-cat="gift"
+             data-name="Hộp quà tết 2026 cao cấp by Honey Bee"
+             data-price="435000"
+             data-image="assets/img/p14.jpg">
+            <img src="assets/img/p14.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-15%</span>
+            <p class="name">Hộp quà tết 2026 cao cấp by Honey Bee</p>
+            <p class="price"><del>500.000đ</del> <b>435.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p15"
+             data-cat="gift"
+             data-name="Quà tặng 20/10 Trà Hoa Mật Hồng Pastel"
+             data-price="625000"
+             data-image="assets/img/p15.jpg">
+            <img src="assets/img/p15.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-18%</span>
+            <p class="name">Quà tặng 20/10 Trà Hoa Mật Hồng Pastel</p>
+            <p class="price"><del>700.000đ</del> <b>625.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+
+        <div class="product"
+             data-id="p16"
+             data-cat="gift"
+             data-name="Set quà tặng 20/11 Happy Teacher Day Whitebox"
+             data-price="565000"
+             data-image="assets/img/p16.jpg">
+            <img src="assets/img/p16.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-25%</span>
+            <p class="name">Set quà tặng 20/11 Happy Teacher Day Whitebox</p>
+            <p class="price"><del>700.000đ</del> <b>565.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+
+        <div class="product"
+             data-id="p17"
+
+             data-name="Set quà tặng cà phê G339, đặc sản Việt"
+             data-price="385000"
+             data-image="assets/img/p17.jpg">
+            <img src="assets/img/p17.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-10%</span>
+            <p class="name">Set quà tặng cà phê G339, đặc sản Việt</p>
+            <p class="price"><del>400.000đ</del> <b>385.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p18"
+             data-name="Quà tặng 20/10 Set trái cây sấy G401"
+             data-price="285000"
+             data-image="assets/img/p18.jpg">
+            <img src="assets/img/p18.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-7%</span>
+            <p class="name">Quà tặng 20/10 Set trái cây sấy G401</p>
+            <p class="price"><del>300.000đ</del> <b>285.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p19"
+             data-cat="gift"
+             data-name="Set quà tặng G330, đặc sản Việt"
+             data-price="635000"
+             data-image="assets/img/p19.jpg">
+            <img src="assets/img/p19.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-35%</span>
+            <p class="name">Set quà tặng G330, đặc sản Việt</p>
+            <p class="price"><del>800.000đ</del> <b>635.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p20"
+             data-cat="gift"
+             data-name="Set quà tặng G302, đặc sản Việt"
+             data-price="265000"
+             data-image="assets/img/p20.jpg">
+            <img src="assets/img/p20.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Set quà tặng G302, đặc sản Việt</p>
+            <p class="price"><del>300.000đ</del> <b>265.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p21"
+             data-cat="gift"
+             data-name="Set quà tặng G312, đặc sản Việt"
+             data-price="255000"
+             data-image="assets/img/p21.jpg">
+            <img src="assets/img/p21.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-15%</span>
+            <p class="name">Set quà tặng G312, đặc sản Việt</p>
+            <p class="price"><del>300.000đ</del> <b>255.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p22"
+             data-cat="gift"
+             data-name="Set quà tết cao cấp mẫu vali sang trọng CTG38"
+             data-price="215000"
+             data-image="assets/img/p22.jpg">
+            <img src="assets/img/p22.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-16%</span>
+            <p class="name">Set quà tết cao cấp mẫu vali sang trọng CTG38</p>
+            <p class="price"><del>300.000đ</del> <b>215.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p23"
+             data-cat="gift"
+             data-name="Set quà tặng hộp gỗ cao cấp Mật ong, Saffron"
+             data-price="235000"
+             data-image="assets/img/p23.jpg">
+            <img src="assets/img/p23.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-15%</span>
+            <p class="name">Set quà tặng hộp gỗ cao cấp Mật ong, Saffron</p>
+            <p class="price"><del>300.000đ</del> <b>235.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p24"
+             data-cat="gift"
+             data-name="Set Quà Tết Honey Bee G3958"
+             data-price="265000"
+             data-image="assets/img/p24.jpg">
+            <img src="assets/img/p24.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">SET QUÀ TẾT Honey Bee G3958</p>
+            <p class="price"><del>300.000đ</del> <b>265.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p25"
+             data-cat="gift"
+             data-name="Set quà tết Thảo mộc mật hoa rừng G366"
+             data-price="225000"
+             data-image="assets/img/p25.jpg">
+            <img src="assets/img/p25.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-18%</span>
+            <p class="name">Set quà tết Thảo mộc mật hoa rừng G366</p>
+            <p class="price"><del>300.000đ</del> <b>225.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p26"
+             data-cat="gift"
+             data-name="Set quà tết cao cấp mẫu vali sang trọng CTG28"
+             data-price="400000"
+             data-image="assets/img/p26.jpg">
+            <img src="assets/img/p26.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-50%</span>
+            <p class="name">Set quà tết cao cấp mẫu vali sang trọng CTG28</p>
+            <p class="price"><del>800.000đ</del> <b>400.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p27"
+             data-cat="gift"
+             data-name="Set quà tặng 8/3 Mật Hoa Trà Tặng Phái Nữ"
+             data-price="275000"
+             data-image="assets/img/p27.jpg">
+            <img src="assets/img/p27.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-7%</span>
+            <p class="name">Set quà tặng 8/3 Mật Hoa Trà Tặng Phái Nữ</p>
+            <p class="price"><del>300.000đ</del> <b>275.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p28"
+             data-cat="gift"
+             data-name="Set quà tặng G327, đặc sản Việt"
+             data-price="465000"
+             data-image="assets/img/p28.jpg">
+            <img src="assets/img/p28.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-23%</span>
+            <p class="name">Set quà tặng G327, đặc sản Việt</p>
+            <p class="price"><del>600.000đ</del> <b>465.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p29"
+             data-cat="gift"
+             data-name="Set quà tặng G316, đặc sản Việt"
+             data-price="310000"
+             data-image="assets/img/p29.jpg">
+            <div class="img-box">
+                <img src="assets/img/p29.jpg" alt="Mật ong Honey Bee">
+            </div>
+            <span class="discount">-28%</span>
+            <p class="name">Set quà tặng G316, đặc sản Việt</p>
+            <p class="price"><del>400.000đ</del> <b>310.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p30"
+             data-cat="gift"
+             data-name="Set quà tặng G318, đặc sản Việt"
+             data-price="265000"
+             data-image="assets/img/p30.jpg">
+            <img src="assets/img/p30.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Set quà tặng G318, đặc sản Việt</p>
+            <p class="price"><del>300.000đ</del> <b>265.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p31"
+             data-cat="gift"
+             data-name="Set quà tặng G308, đặc sản Việt"
+             data-price="465000"
+             data-image="assets/img/p31.jpg">
+            <img src="assets/img/p31.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-22%</span>
+            <p class="name">Set quà tặng G308, đặc sản Việt</p>
+            <p class="price"><del>600.000đ</del> <b>465.000đ</b></p>
+            <div class="btn-row"><button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+            </div>
+
+        <div class="product"
+             data-id="p32"
+             data-cat="gift"
+             data-name="Set quà tặng G330, đặc sản Việt"
+             data-price="200000"
+             data-image="assets/img/p32.jpg">
+            <img src="assets/img/p32.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-25%</span>
+            <p class="name">Set quà tặng G330, đặc sản Việt</p>
+            <p class="price"><del>250.000đ</del> <b>200.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p33"
+             data-cat="gift"
+             data-name="Mật ong hoa rừng nguyên chất CT Bee"
+             data-price="265000"
+             data-image="assets/img/p33.jpg">
+            <img src="assets/img/p33.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Mật ong hoa rừng nguyên chất CT Bee</p>
+            <p class="price"><del>300.000đ</del> <b>265.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p34"
+             data-cat="mat-ong-rung"
+             data-name="Mật ong ruồi rừng Gia Lai 1L"
+             data-price="165000"
+             data-image="assets/img/p34.jpg">
+            <img src="assets/img/p34.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-45%</span>
+            <p class="name">Mật ong ruồi rừng Gia Lai 1L</p>
+            <p class="price"><del>300.000đ</del> <b>165.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p35"
+             data-cat="mat-ong-rung"
+             data-name="Mật Ong Khoái Rừng Tây Nguyên 1L"
+             data-price="315000"
+             data-image="assets/img/p35.jpg">
+            <img src="assets/img/p35.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-25%</span>
+            <p class="name">Mật Ong Khoái Rừng Tây Nguyên 1L</p>
+            <p class="price"><del>400.000đ</del> <b>315.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p36"
+             data-cat="mat-ong-rung"
+             data-name="Mật ong ruồi rừng Gia Lai 1L"
+             data-price="225000"
+             data-image="assets/img/p36.jpg">
+            <img src="assets/img/p36.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-20%</span>
+            <p class="name">Mật ong ruồi rừng Gia Lai 1L</p>
+            <p class="price"><del>300.000đ</del> <b>225.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p37"
+             data-cat="gift"
+             data-name="Set quà tặng G218, đặc sản Việt"
+             data-price="465000"
+             data-image="assets/img/p37.jpg">
+            <img src="assets/img/p37.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Set quà tặng G218, đặc sản Việt</p>
+            <p class="price"><del>500.000đ</del> <b>465.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p38"
+             data-cat="gift"
+             data-name="Set quà tặng G358, đặc sản Việt"
+             data-price="265000"
+             data-image="assets/img/p38.jpg">
+            <img src="assets/img/p38.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Set quà tặng G358, đặc sản Việt</p>
+            <p class="price"><del>300.000đ</del> <b>265.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p39"
+             data-cat="gift"
+             data-name="Set 457 quà tặng 20/10 Phụ Nữ Honey Bee"
+             data-price="265000"
+             data-image="assets/img/p39.jpg">
+            <img src="assets/img/p39.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Set 457 quà tặng 20/10 Phụ Nữ Honey Bee</p>
+            <p class="price"><del>300.000đ</del> <b>265.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p40"
+             data-cat="gift"
+             data-name="Set quà tặng G418, đặc sản Việt"
+             data-price="365000"
+             data-image="assets/img/p40.jpg">
+            <img src="assets/img/p40.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Set quà tặng G418, đặc sản Việt</p>
+            <p class="price"><del>400.000đ</del> <b>365.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p41"
+             data-name="Nghệ Đỏ Ngâm Mật Ong Hoa Rừng"
+             data-price="245000"
+             data-image="assets/img/p41.jpg">
+            <img src="assets/img/p41.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-17%</span>
+            <p class="name">Nghệ Đỏ Ngâm Mật Ong Hoa Rừng</p>
+            <p class="price"><del>300.000đ</del> <b>245.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p42"
+             data-name="Chanh Đào Ngâm Mật Ong Hoa Rừng 500ML"
+             data-price="265000"
+             data-image="assets/img/p42.jpg">
+            <img src="assets/img/p42.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Chanh Đào Ngâm Mật Ong Hoa Rừng 500ML</p>
+            <p class="price"><del>300.000đ</del> <b>265.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p43"
+             data-name="Gừng Sẻ Ngâm Mật Ong Nguyên Chất 500ML"
+             data-price="245000"
+             data-image="assets/img/p43.jpg">
+            <img src="assets/img/p43.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Gừng Sẻ Ngâm Mật Ong Nguyên Chất 500ML</p>
+            <p class="price"><del>300.000đ</del> <b>245.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p44"
+             data-cat="gift"
+             data-name="Set quà tặng G358, đặc sản Việt"
+             data-price="375000"
+             data-image="assets/img/p44.jpg">
+            <img src="assets/img/p44.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-12%</span>
+            <p class="name">Set quà tặng G358, đặc sản Việt</p>
+            <p class="price"><del>400.000đ</del> <b>375.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p45"
+             data-cat="gift"
+             data-name="Set quà tặng 20/10 Phụ Nữ Honey Bee"
+             data-price="265000"
+             data-image="assets/img/p45.jpg">
+            <img src="assets/img/p45.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-15%</span>
+            <p class="name">Set quà tặng 20/10 Phụ Nữ Honey Bee</p>
+            <p class="price"><del>300.000đ</del> <b>255.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="product"
+             data-id="p46"
+             data-cat="gift"
+             data-name="Set quà tết cao cấp mẫu vali sang trọng CTG382"
+             data-price="355000"
+             data-image="assets/img/p46.jpg">
+            <img src="assets/img/p46.jpg" alt="Mật ong Honey Bee">
+            <span class="discount">-15%</span>
+            <p class="name">Set quà tết cao cấp mẫu vali sang trọng CTG382</p>
+            <p class="price"><del>400.000đ</del> <b>355.000đ</b></p>
+            <div class="btn-row">
+                <button class="btn-cart" type="button" aria-label="Thêm vào giỏ">🛒</button>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+
+        <div class="top-sortbar">
+            <span class="sortbar__label">Sắp xếp</span>
+            <select id="sortSelect" class="sortbar__select">
+                <option value="newest">Mới nhất</option>
+                <option value="priceAsc">Giá từ thấp đến cao</option>
+                <option value="priceDesc">Giá từ cao đến thấp</option>
+                <option value="best">Bán chạy</option>
+            </select>
+        </div>
+
+        <div class="pagination" id="pager">
+            <button class="page-btn prev" disabled>&lt;</button>
+            <button class="page-btn is-active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">5</button>
+            <button class="page-btn next">&gt;</button>
+        </div>
+
+
+        <button id="backToTop" title="Lên đầu trang">↑</button>
+
+        <script>
+
+            window.onscroll = function() {
+                const btn = document.getElementById("backToTop");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    btn.style.display = "block";
+                } else {
+                    btn.style.display = "none";
+                }
+            };
+
+
+            document.getElementById("backToTop").onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        </script>
+
+
+    </section>
+
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>Liên hệ chúng tôi</h4>
+            <p>Địa chỉ: Khu phố 6, Thủ Đức, Thành phố Hồ Chí Minh</p>
+            <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+            <p>Email: <a href="mailto:info@honeybee.vn">info@honeybee.vn</a></p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Chính sách</h4>
+            <ul>
+                <li><a href="#">Chính sách vận chuyển</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Về chúng tôi</h4>
+            <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Lĩnh vực hoạt động</a></li>
+                <li><a href="#">Triết lý kinh doanh</a></li>
+                <li><a href="#">Cơ sở vật chất</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Đăng ký nhận ưu đãi</h4>
+            <p>Nhập email để nhận khuyến mãi mới nhất và tin tức từ HONEY BEE.</p>
+            <form class="subscribe-form" action="#" onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi đã nhận email của bạn.');">
+                <input type="email" name="email" placeholder="Email của bạn" required>
+                <button type="submit">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">Copyright 2025 © Web mật ong Honey Bee</div>
+</footer>
+<div id="cartAlert">🛒 Đã thêm vào giỏ hàng!</div>
+
+</body>
+</html>
