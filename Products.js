@@ -2,8 +2,8 @@
     const KEY = "hb_cart";
 
     // Helpers
-    const safeParse = (txt) => { try { return JSON.parse(txt); } catch { return null; } };
-    const getCart   = () => safeParse(localStorage.getItem(KEY)) || [];
+    const safeParse = (txt) => { try { const p = JSON.parse(txt); return Array.isArray(p) ? p : []; } catch { return []; } };
+    const getCart   = () => safeParse(localStorage.getItem(KEY));
     const setCart   = (c) => { localStorage.setItem(KEY, JSON.stringify(c)); updateBadge(c); };
     const countCart = (cart = getCart()) => cart.reduce((s, i) => s + (i.qty || 0), 0);
 
