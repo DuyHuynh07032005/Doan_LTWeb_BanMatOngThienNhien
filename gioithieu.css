@@ -47,7 +47,6 @@ body {
     display: inline-block;
     background: linear-gradient(90deg, #fff 0%, #fff 30%, #ffe082 50%, #fff 70%, #fff 100%);
     background-size: 200%;
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s linear infinite;
@@ -78,13 +77,13 @@ header{
     display: flex;
     align-items: center;
     gap: 16px;
-    height: auto;
+    height: 84px;
     margin-left: 20px;
     overflow: hidden;
 }
 
 .logo img {
-    max-height: 84px;
+    height: 130px;
     width: auto;
     object-fit: contain;
     transform-origin: left center;
@@ -166,7 +165,7 @@ header{
 .cart {
     display: flex;
     align-items: center;
-gap: 6px;
+    gap: 6px;
     font-weight: 700;
     color: #222;
     cursor: pointer;
@@ -212,12 +211,18 @@ gap: 6px;
     border-radius: 50%;
     padding: 3px 6px;
 }
+
+@media (max-width: 992px){
+    .header-inner{ grid-template-columns:1fr auto; row-gap:10px; }
+    .logo img{ width:140px; }
+    .main-nav{ gap:18px; }
+}
 .banner {
     position: relative;
     overflow: hidden;
-    height: 350px;
+    height: 280px;
     border-bottom: 2px solid #d8c08a;
-    background-image: none; /* Quan trọng: loại bỏ ảnh nền tĩnh */
+    background-image:none;
 }
 
 /* Định kiểu cho Slide Container */
@@ -245,26 +250,6 @@ gap: 6px;
 
 .banner-slide.active {
     opacity: 1; /* Hiển thị slide đang hoạt động */
-}
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff; /* chữ màu trắng */
-    text-align: center;
-    z-index: 20; /* cao hơn slide */
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5); /* làm nổi chữ trên ảnh */
-}
-
-.banner-text h1 {
-    font-size: 2.5rem;
-    margin: 0 0 10px;
-}
-
-.banner-text p {
-    font-size: 1.2rem;
-    margin: 0;
 }
 
 /* Cần đảm bảo lớp phủ và nội dung chữ ở trên các slide */
@@ -324,6 +309,24 @@ gap: 6px;
     border: 1px solid white;
 }
 
+
+@media (max-width: 992px){
+    .banner{ height: 350px; }
+    .banner-inner h2{ font-size: 36px; }
+    .banner-inner p{ font-size: 16px; }
+}
+@media (max-width: 600px) {
+    .banner {
+        height: 280px;
+    }
+    .banner-inner h2 {
+        font-size: 28px;
+    }
+    .banner-inner p {
+        font-size: 14px;
+    }
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -334,7 +337,6 @@ gap: 6px;
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-
 /* Nội dung giới thiệu */
 .about-content {
   padding: 60px 0;
