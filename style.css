@@ -47,6 +47,8 @@ body {
     display: inline-block;
     background: linear-gradient(90deg, #fff 0%, #fff 30%, #ffe082 50%, #fff 70%, #fff 100%);
     background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s linear infinite;
 }
