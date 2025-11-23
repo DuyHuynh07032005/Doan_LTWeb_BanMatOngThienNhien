@@ -223,7 +223,7 @@ header{
     overflow: hidden;
     height: 280px;
     border-bottom: 2px solid #d8c08a;
-    background-image:none;
+    background-image: url("assets/img/banner1.webp");
 }
 
 /* Định kiểu cho Slide Container */
