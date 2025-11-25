@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Honey Bee | Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Admin.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<input type="checkbox" id="darkModeToggle" hidden>
+
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="honeylogo-circl">
+        <img src="logo-honeybee.png" alt="Honey Bee Logo">
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Honey Bee</span>
+        <span class="brand-role">Mật ong nguyên chất</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="nav-item active" data-page="dashboard">
+        <i class="fa-solid fa-gauge"></i> Dashboard
+      </a>
+      <a href="#" class="nav-item" data-page="products">
+        <i class="fa-solid fa-box"></i> Sản phẩm
+      </a>
+      <a href="#" class="nav-item" data-page="categories">
+        <i class="fa-solid fa-layer-group"></i> Danh mục
+      </a>
+      <a href="#" class="nav-item" data-page="orders">
+        <i class="fa-solid fa-cart-shopping"></i> Đơn hàng
+      </a>
+      <a href="#" class="nav-item" data-page="customers">
+        <i class="fa-solid fa-users"></i> Khách hàng
+      </a>
+      <a href="#" class="nav-item" data-page="posts">
+        <i class="fa-solid fa-newspaper"></i> Bài viết
+      </a>
+
+      <!-- 🟡 MỤC MỚI: Banner -->
+      <a href="#" class="nav-item" data-page="banner">
+        <i class="fa-solid fa-image"></i> Banner
+      </a>
+
+      <!-- 🟡 MỤC MỚI: Thống kê -->
+      <a href="#" class="nav-item" data-page="analytics">
+        <i class="fa-solid fa-chart-column"></i> Thống kê
+      </a>
+
+      <!-- 🟡 MỤC MỚI: Đánh giá sản phẩm -->
+      <a href="#" class="nav-item" data-page="reviews">
+        <i class="fa-solid fa-star"></i> Đánh giá
+      </a>
+
+      <!-- 🟡 MỤC MỚI: Liên hệ -->
+      <a href="#" class="nav-item" data-page="contacts">
+        <i class="fa-solid fa-envelope"></i> Liên hệ
+      </a>
+
+      <a href="#" class="nav-item" data-page="settings">
+        <i class="fa-solid fa-gear"></i> Cài đặt
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN AREA -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="page-title">Dashboard</h1>
+      </div>
+
+      <div class="topbar-center">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Tìm kiếm trong admin...">
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="icon-btn">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <button class="icon-btn">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+
+        <!-- Toggle dark / light: liên kết với #darkModeToggle -->
+        <label for="darkModeToggle" class="theme-toggle">
+          <span class="slider"></span>
+        </label>
+
+        <div class="admin-user">
+          <img src="assets/img/Admin.png" alt="Admin" class="avatar">
+          <div class="admin-info">
+            <span class="admin-name">Admin Honey</span>
+            <span class="admin-role">Quản trị viên</span>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="content">
+
+      <!-- 🟡 DASHBOARD -->
+      <section id="page-dashboard" class="page-section active">
+
+        <!-- Cards -->
+        <section class="cards-row">
+
+          <article class="stat-card stat-1">
+            <div class="stat-header">
+              <h2>Doanh thu tuần</h2>
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <p class="stat-value">15.000.000₫</p>
+            <p class="stat-sub">Tăng 60% so với tuần trước</p>
+          </article>
+
+          <article class="stat-card stat-2">
+            <div class="stat-header">
+              <h2>Đơn hàng tuần</h2>
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+            <p class="stat-value">125 đơn</p>
+            <p class="stat-sub">Giảm 10% so với tuần trước</p>
+          </article>
+
+          <article class="stat-card stat-3">
+            <div class="stat-header">
+              <h2>Khách online</h2>
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <p class="stat-value">87 người</p>
+            <p class="stat-sub">Tăng 5% gần đây</p>
+          </article>
+
+        </section>
+
+        <!-- HÀNG BIỂU ĐỒ -->
+        <section class="charts-row">
+
+          <!-- DONUT -->
+          <div class="chart-card">
+            <h3 class="chart-title">Nguồn truy cập cửa hàng</h3>
+
+            <div class="css-donut-chart">
+              <div class="center-hole"></div>
+            </div>
+
+            <ul class="traffic-list">
+              <li><span class="dot dot-honey"></span> Tìm kiếm – 40%</li>
+              <li><span class="dot dot-flower"></span> Mạng xã hội – 35%</li>
+              <li><span class="dot dot-combo"></span> Trực tiếp – 25%</li>
+            </ul>
+          </div>
+
+          <!-- WAVE -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Doanh thu 8 tháng của cửa hàng</h3>
+            </div>
+
+            <div class="wave-chart">
+              <div class="wave-grid"></div>
+
+              <svg viewBox="0 0 100 40" preserveAspectRatio="none" class="wave-svg">
+                <defs>
+                  <linearGradient id="waveFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#f7b500" stop-opacity="0.55"/>
+                    <stop offset="100%" stop-color="#f7b500" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+
+                <path class="wave-line"
+                      d="M0,30
+                         C 10,25  15,18  25,20
+                         C 35,22  40,12  50,15
+                         C 60,18  65,10  75,13
+                         C 85,16  90,20 100,14" />
+
+                <path class="wave-fill"
+                      d="M0,30
+                         C 10,25  15,18  25,20
+                         C 35,22  40,12  50,15
+                         C 60,18  65,10  75,13
+                         C 85,16  90,20 100,14
+                         L100,40 L0,40 Z" />
+              </svg>
+
+              <div class="wave-x-labels">
+                <span>T1</span><span>T2</span><span>T3</span><span>T4</span>
+                <span>T5</span><span>T6</span><span>T7</span><span>T8</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- DƯỚI BIỂU ĐỒ: TOP SẢN PHẨM & ĐƠN HÀNG GẦN ĐÂY -->
+        <section class="dashboard-bottom">
+
+          <!-- TOP SẢN PHẨM BÁN CHẠY -->
+          <div class="bottom-card">
+            <div class="bottom-card-header">
+              <h3>Sản phẩm bán chạy</h3>
+              <span class="sub-text">Top 3 tuần này</span>
+            </div>
+
+            <ul class="best-seller-list">
+              <li class="bs-item">
+                <img src="assets/img/p1.png" alt="" class="bs-thumb">
+                <div class="bs-info">
+                  <div class="bs-name">Mật ong Hoa Bạc Hà Thảo Mộc chai 600ML</div>
+                  <div class="bs-meta">Bán được 120 lọ</div>
+                  <div class="bs-progress">
+                    <div class="bs-progress-fill" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="bs-value">12.000.000₫</div>
+                <button class="view-detail">Xem chi tiết</button>
+
+              </li>
+
+              <li class="bs-item">
+                <img src="assets/img/p4.jpg" alt="" class="bs-thumb">
+                <div class="bs-info">
+                  <div class="bs-name">Mật ong Hoa Trắng Thảo Mộc chai 600ML</div>
+                  <div class="bs-meta">Bán được 95 lọ</div>
+                  <div class="bs-progress">
+                    <div class="bs-progress-fill" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="bs-value">8.500.000₫</div>
+                <button class="view-detail">Xem chi tiết</button>
+
+              </li>
+
+              <li class="bs-item">
+                <img src="assets/img/p45.jpg" alt="" class="bs-thumb">
+                <div class="bs-info">
+                  <div class="bs-name">Set quà tặng 20/10 Phụ Nữ Honey Bee</div>
+                  <div class="bs-meta">Bán được 60 hộp</div>
+                  <div class="bs-progress">
+                    <div class="bs-progress-fill" style="width: 55%"></div>
+                  </div>
+                </div>
+                <div class="bs-value">6.200.000₫</div>
+                <button class="view-detail">Xem chi tiết</button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ĐƠN HÀNG GẦN ĐÂY -->
+          <div class="bottom-card">
+            <div class="bottom-card-header">
+              <h3>Đơn hàng gần đây</h3>
+              <span class="sub-text">Trong 24 giờ</span>
+            </div>
+
+            <ul class="order-list">
+              <li class="order-item">
+                <div>
+                  <div class="order-code">#HB1234</div>
+                  <div class="order-customer">Huỳnh Bảo Duy</div>
+                </div>
+                <div class="order-right">
+                  <span class="order-amount">450.000₫</span>
+                  <span class="order-status status-pending">Chờ xử lý</span>
+                </div>
+              </li>
+
+              <li class="order-item">
+                <div>
+                  <div class="order-code">#HB1235</div>
+                  <div class="order-customer">Võ Thành Giỏi</div>
+                </div>
+                <div class="order-right">
+                  <span class="order-amount">720.000₫</span>
+                  <span class="order-status status-shipping">Đang giao</span>
+                </div>
+              </li>
+
+              <li class="order-item">
+                <div>
+                  <div class="order-code">#HB1236</div>
+                  <div class="order-customer">Huỳnh Tuấn Anh</div>
+                </div>
+                <div class="order-right">
+                  <span class="order-amount">310.000₫</span>
+                  <span class="order-status status-done">Hoàn thành</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ⭐ ĐÁNH GIÁ MỚI -->
+          <div class="bottom-card">
+            <div class="bottom-card-header">
+              <h3>Đánh giá mới</h3>
+              <span class="sub-text">Trong tuần này</span>
+            </div>
+
+            <ul class="review-list">
+              <li class="review-item">
+                <div class="review-main">
+                  <div class="review-product">Mật ong Hoa Bạc Hà 600ML</div>
+                  <div class="review-user">Bởi: <strong>Nguyễn Lan</strong></div>
+                  <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="review-text">
+                    “Mật thơm, ngọt dịu, đóng gói chắc chắn, giao hàng nhanh.”
+                  </div>
+                </div>
+                <div class="review-meta">
+                  <span class="review-score">4/5</span>
+                  <span class="review-time">2 giờ trước</span>
+                </div>
+              </li>
+
+              <li class="review-item">
+                <div class="review-main">
+                  <div class="review-product">Set quà tặng 20/10 Honey Bee</div>
+                  <div class="review-user">Bởi: <strong>Trần Minh</strong></div>
+                  <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="review-text">
+                    “Hộp quà đẹp, rất phù hợp làm quà tặng, người nhận rất thích.”
+                  </div>
+                </div>
+                <div class="review-meta">
+                  <span class="review-score">5/5</span>
+                  <span class="review-time">Hôm qua</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ✉ LIÊN HỆ GẦN ĐÂY -->
+          <div class="bottom-card">
+            <div class="bottom-card-header">
+              <h3>Liên hệ gần đây</h3>
+              <span class="sub-text">Từ form liên hệ</span>
+            </div>
+
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="contact-main">
+                  <div class="contact-name">Phạm Thu Ngân</div>
+                  <div class="contact-email">nganpham@example.com</div>
+                  <div class="contact-message">
+                    “Mình muốn hỏi về chính sách sỉ cho đại lý tỉnh.”
+                  </div>
+                </div>
+                <div class="contact-meta">
+                  <span class="contact-time">30 phút trước</span>
+                  <span class="contact-status contact-new">Mới</span>
+                </div>
+              </li>
+
+              <li class="contact-item">
+                <div class="contact-main">
+                  <div class="contact-name">Lê Hoàng Nam</div>
+                  <div class="contact-email">namle@example.com</div>
+                  <div class="contact-message">
+                    “Cho mình xin bảng giá combo quà tặng công ty.”
+                  </div>
+                </div>
+                <div class="contact-meta">
+                  <span class="contact-time">Hôm qua</span>
+                  <span class="contact-status contact-replied">Đã phản hồi</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+        </section>
+
+      <!-- Các trang khác (products, categories, ...) bạn có thể thêm bên dưới nếu cần -->
+
+    </main><!-- hết main.content -->
+
+  </div><!-- hết .main -->
+
+</div><!-- hết .admin-layout -->
+<footer class="admin-footer">
+  © 2025 Honey Bee Admin — Nhóm 19 thực hiện
+</footer>
+
+</body>
+</html>
