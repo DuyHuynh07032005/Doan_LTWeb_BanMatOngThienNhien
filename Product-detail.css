@@ -224,13 +224,6 @@ header{
     border-bottom: 2px solid #d8c08a;
     background-image: url("assets/img/banner1.webp");
 }
-.banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.35); /* chỉnh độ mờ ở đây */
-    z-index: 1;
-}
 
 .banner .banner-text {
     position: relative;
