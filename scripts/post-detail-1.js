@@ -1,4 +1,3 @@
-// PostDetail.js
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('comment-form');
@@ -12,15 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (form) {
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Ngăn chặn hành vi gửi form mặc định
-
-            const inputs = form.querySelectorAll('input[required], textarea[required]');
-            const emailInput = form.querySelector('input[type="email"]');
             let allFieldsFilled = true;
 
             // Kiểm tra các trường bắt buộc
             inputs.forEach(input => {
-                if (input.value.trim() === '') {
                     allFieldsFilled = false;
                 }
             });
@@ -41,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // --- Giả lập gửi dữ liệu thành công ---
             messageDisplay.textContent = '✅ Bình luận của bạn đang chờ phê duyệt.';
             messageDisplay.style.color = 'green';
 
