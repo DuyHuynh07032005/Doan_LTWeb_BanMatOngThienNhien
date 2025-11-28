@@ -1,14 +1,22 @@
+// Blog.js (Đã loại bỏ logic truy vấn dữ liệu và cố định 4 ảnh banner)
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- LOGIC BANNER SLIDESHOW ---
 
+    // Hàm lấy danh sách 4 ảnh CỐ ĐỊNH
     function getActiveBanners() {
         return [
+            "../assets/banner1.webp",
+            "../assets/banner2.png",
+            "../assets/banner3.jpg",
+            "../assets/banner4.jpg"
         ];
     }
 
     let slideIndex = 0;
     let slideshowInterval;
+    const bannerUrls = getActiveBanners();
 
     function setupSlideshow() {
         const slideContainer = document.getElementById('slide-container');
@@ -16,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!slideContainer || !dotsContainer || bannerUrls.length === 0) return;
 
+        // 1. TẠO CÁC SLIDE VÀ NÚT ĐIỀU HƯỚNG DỰA TRÊN DANH SÁCH 4 ẢNH
         slideContainer.innerHTML = '';
         dotsContainer.innerHTML = '';
 
@@ -88,5 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlides(slideIndex);
     }
 
+    // CHẠY SETUP SLIDESHOW
     setupSlideshow();
 });
