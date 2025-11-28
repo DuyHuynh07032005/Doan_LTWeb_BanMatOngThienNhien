@@ -228,6 +228,7 @@ header{
     overflow: hidden;
     height: 280px;
     border-bottom: 2px solid #d8c08a;
+    background-image: none;
 }
 
 /* Định kiểu cho Slide Container */
@@ -249,14 +250,18 @@ header{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .banner-slide.active {
+    opacity: 1;
 }
 
 /* Cần đảm bảo lớp phủ và nội dung chữ ở trên các slide */
 .banner-inner {
     position: relative;
+    z-index: 10;
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
@@ -306,6 +311,7 @@ header{
 }
 
 .dot.active {
+    background-color: #f7b500;
     border: 1px solid white;
 }
 

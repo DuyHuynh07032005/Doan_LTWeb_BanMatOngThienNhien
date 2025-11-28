@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     /* =======================================================
        PHẦN 1: XỬ LÝ FORM LIÊN HỆ
        ======================================================= */
+    const form = document.getElementById('contact-form');
+    const messageDisplay = document.getElementById('form-message');
 
     // Hàm kiểm tra định dạng email bằng Regex
     function isValidEmail(email) {
@@ -14,7 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (form) {
         form.addEventListener('submit', function(event) {
+            event.preventDefault();
 
+            // Lấy input theo ID trong HTML
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageText = document.getElementById('message');
 
             const name = nameInput?.value.trim() || '';
             const email = emailInput?.value.trim() || '';
@@ -25,16 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 messageDisplay.style.color = 'red';
             }
 
+            // Kiểm tra trường bắt buộc: Tên, Email, Nội dung
+            if (!name || !email || !message) {
                 if (messageDisplay) messageDisplay.textContent = 'Vui lòng điền đầy đủ các trường bắt buộc.';
                 return;
             }
 
+            // Kiểm tra định dạng Email
             if (!isValidEmail(email)) {
                 if (messageDisplay) messageDisplay.textContent = 'Địa chỉ email không hợp lệ.';
                 emailInput?.focus();
                 return;
             }
 
+            // GIẢ LẬP GỬI THÀNH CÔNG
             if (messageDisplay) {
                 messageDisplay.textContent = '✅ Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công.';
                 messageDisplay.style.color = 'green';
@@ -47,13 +58,19 @@ document.addEventListener('DOMContentLoaded', function() {
        PHẦN 2: LOGIC BANNER SLIDESHOW (4 ẢNH CỐ ĐỊNH)
        ======================================================= */
 
+    // Hàm lấy danh sách 4 ảnh CỐ ĐỊNH
     function getActiveBanners() {
         return [
+            "../assets/banner1.webp",
+            "../assets/banner2.png",
+            "../assets/banner3.jpg",
+            "../assets/banner4.jpg"
         ];
     }
 
     let slideIndex = 0;
     let slideshowInterval;
+    const bannerUrls = getActiveBanners();
 
     function setupSlideshow() {
         const slideContainer = document.getElementById('slide-container');
@@ -61,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!slideContainer || !dotsContainer || bannerUrls.length === 0) return;
 
+        // 1. TẠO CÁC SLIDE VÀ NÚT ĐIỀU HƯỚNG DỰA TRÊN DANH SÁCH 4 ẢNH
         slideContainer.innerHTML = '';
         dotsContainer.innerHTML = '';
 
@@ -128,5 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlides(slideIndex);
     }
 
+    // CHẠY SETUP SLIDESHOW
     setupSlideshow();
 });
