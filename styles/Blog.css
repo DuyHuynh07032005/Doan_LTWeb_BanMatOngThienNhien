@@ -1,4 +1,3 @@
-/* Blog.css (Đã bao gồm định kiểu cho Slideshow Banner) */
 
 /* === PHẦN 1: CSS CHUNG (TOPBAR, HEADER, BANNER, SLIDESHOW) === */
 body {
@@ -227,7 +226,6 @@ header{
     overflow: hidden;
     height: 280px;
     border-bottom: 2px solid #d8c08a;
-    background-image: none; /* Quan trọng: loại bỏ ảnh nền tĩnh */
 }
 
 /* Định kiểu cho Slide Container */
@@ -249,18 +247,14 @@ header{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0; /* Mặc định ẩn */
-    transition: opacity 1s ease-in-out; /* Hiệu ứng mờ dần */
 }
 
 .banner-slide.active {
-    opacity: 1; /* Hiển thị slide đang hoạt động */
 }
 
 /* Cần đảm bảo lớp phủ và nội dung chữ ở trên các slide */
 .banner-inner {
     position: relative;
-    z-index: 10; /* Tăng z-index để nằm trên slide */
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
@@ -310,7 +304,6 @@ header{
 }
 
 .dot.active {
-    background-color: #f7b500; /* Màu vàng khi active */
     border: 1px solid white;
 }
 
@@ -343,9 +336,6 @@ header{
     border: 0;
 }
 
-    /* ------------------------------------------------ */
-    /* === PHẦN 2: CSS TRANG BLOG === */
-    /* ------------------------------------------------ */
 
 .blog-grid {
     display: grid;
@@ -448,21 +438,6 @@ header{
     padding-left: 5px;
 }
 
-.pagination { text-align: center; margin-top: 20px; }
-
-.pagination a {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    margin: 0 5px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    border-radius: 4px;
-}
-.pagination a.active {
-    border-color: #f7b500;
-    color: white;
-    background: #f7b500;
 }
 
 @media (max-width: 768px) {
@@ -498,9 +473,6 @@ header{
     background-color: #e0a800;
     transform: scale(1.1);
 }
-    /* ------------------------------------------------ */
-    /* === PHẦN 3: CSS FOOTER === */
-    /* ------------------------------------------------ */
 footer {
     background-color: #0f1724;
     color: #e2e8f0;
