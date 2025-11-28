@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     /* =======================================================
        PHẦN 1: XỬ LÝ FORM LIÊN HỆ
        ======================================================= */
-    const messageDisplay = document.getElementById('form-message'); // Element để hiển thị thông báo
 
     // Hàm kiểm tra định dạng email bằng Regex
     function isValidEmail(email) {
