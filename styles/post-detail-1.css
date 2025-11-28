@@ -11,6 +11,7 @@
 /* Đảm bảo tiêu đề chính hiển thị rõ ràng */
 .post-main-content h1 {
     font-size: 2.5rem;
+    color: #333;
     margin-bottom: 10px;
     font-weight: 800;
 }
@@ -94,6 +95,7 @@
 @media (max-width: 768px) {
     .post-detail-container {
         grid-template-columns: 1fr;
+        padding-top: 20px;
     }
 }
 #backToTop {

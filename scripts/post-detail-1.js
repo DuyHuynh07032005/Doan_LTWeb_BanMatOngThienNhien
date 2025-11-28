@@ -11,10 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (form) {
         form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Lấy input theo ID trong HTML
+            const inputs = [
+                document.getElementById('comment-name'),
+                document.getElementById('comment-email'),
+                document.getElementById('comment-message-text')
+            ];
+            const emailInput = document.getElementById('comment-email');
             let allFieldsFilled = true;
 
             // Kiểm tra các trường bắt buộc
             inputs.forEach(input => {
+                if (!input || input.value.trim() === '') {
                     allFieldsFilled = false;
                 }
             });
@@ -35,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
+            // Giả lập gửi dữ liệu thành công
             messageDisplay.textContent = '✅ Bình luận của bạn đang chờ phê duyệt.';
             messageDisplay.style.color = 'green';
 
