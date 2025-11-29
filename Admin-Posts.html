@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Honey Bee | Admin Bài viết</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Admin.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<input type="checkbox" id="darkModeToggle" hidden>
+
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="honeylogo-circl">
+        <img src="logo-honeybee.png" alt="Honey Bee Logo">
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Honey Bee</span>
+        <span class="brand-role">Mật ong nguyên chất</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="Admin-Dashboard.html" class="nav-item" data-page="dashboard">
+        <i class="fa-solid fa-gauge"></i> Dashboard
+      </a>
+      <a href="Admin-Products.html" class="nav-item" data-page="products">
+        <i class="fa-solid fa-box"></i> Sản phẩm
+      </a>
+      <a href="Admin-Categories.html" class="nav-item" data-page="categories">
+        <i class="fa-solid fa-layer-group"></i> Danh mục
+      </a>
+      <a href="Admin-Orders.html" class="nav-item" data-page="orders">
+        <i class="fa-solid fa-cart-shopping"></i> Đơn hàng
+      </a>
+      <a href="Admin-Customers.html" class="nav-item" data-page="customers">
+        <i class="fa-solid fa-users"></i> Khách hàng
+      </a>
+      <a href="Admin-Posts.html" class="nav-item active" data-page="posts">
+        <i class="fa-solid fa-newspaper"></i> Bài viết
+      </a>
+      <a href="#" class="nav-item" data-page="banner">
+        <i class="fa-solid fa-image"></i> Banner
+      </a>
+      <a href="#" class="nav-item" data-page="analytics">
+        <i class="fa-solid fa-chart-column"></i> Thống kê
+      </a>
+      <a href="#" class="nav-item" data-page="reviews">
+        <i class="fa-solid fa-star"></i> Đánh giá
+      </a>
+      <a href="#" class="nav-item" data-page="contacts">
+        <i class="fa-solid fa-envelope"></i> Liên hệ
+      </a>
+      <a href="Admin-Setting.html" class="nav-item" data-page="settings">
+        <i class="fa-solid fa-gear"></i> Cài đặt
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="page-title">Bài viết</h1>
+      </div>
+
+      <div class="topbar-center">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Tìm nhanh bài viết...">
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="icon-btn">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <button class="icon-btn">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+
+        <label for="darkModeToggle" class="theme-toggle">
+          <span class="slider"></span>
+        </label>
+
+        <div class="admin-user">
+          <img src="assets/img/Admin.png" alt="Admin" class="avatar">
+          <div class="admin-info">
+            <span class="admin-name">Admin Honey</span>
+            <span class="admin-role">Quản trị viên</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="content">
+
+      <section id="page-posts" class="page-section active">
+
+        <!-- CARDS THỐNG KÊ -->
+        <section class="cards-row">
+          <article class="stat-card stat-1">
+            <div class="stat-header">
+              <h2>Tổng bài viết</h2>
+              <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <p class="stat-value">35</p>
+            <p class="stat-sub">Tất cả bài blog / tin tức</p>
+          </article>
+
+          <article class="stat-card stat-2">
+            <div class="stat-header">
+              <h2>Đã xuất bản</h2>
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <p class="stat-value">28</p>
+            <p class="stat-sub">Đang hiển thị trên website</p>
+          </article>
+
+          <article class="stat-card stat-3">
+            <div class="stat-header">
+              <h2>Bản nháp</h2>
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <p class="stat-value">7</p>
+            <p class="stat-sub">Chưa xuất bản</p>
+          </article>
+        </section>
+
+        <!-- LỌC & TÌM KIẾM -->
+        <section class="bottom-card" style="margin-top:16px;">
+          <div class="bottom-card-header">
+            <h3>Lọc &amp; tìm kiếm</h3>
+            <span class="sub-text">Quản lý bài viết blog Honey Bee</span>
+          </div>
+
+          <div class="product-filters">
+            <div class="pf-left">
+
+              <div class="pf-item">
+                <label>Trạng thái</label>
+                <select>
+                  <option>Tất cả</option>
+                  <option>Đã xuất bản</option>
+                  <option>Nháp</option>
+                  <option>Đã ẩn</option>
+                </select>
+              </div>
+
+              <div class="pf-item">
+                <label>Chuyên mục</label>
+                <select>
+                  <option>Tất cả</option>
+                  <option>Kiến thức sức khỏe</option>
+                  <option>Công thức &amp; món ngon</option>
+                  <option>Tin tức Honey Bee</option>
+                </select>
+              </div>
+
+              <div class="pf-item">
+                <label>Tác giả</label>
+                <select>
+                  <option>Tất cả</option>
+                  <option>Admin Honey</option>
+                  <option>Nhóm 19</option>
+                </select>
+              </div>
+
+              <div class="pf-item pf-search-wrap">
+                <label>Tìm kiếm</label>
+                <div class="pf-search">
+                  <input type="text" placeholder="Tiêu đề / nội dung tóm tắt...">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="pf-right">
+              <button class="btn-ghost">
+                <i class="fa-solid fa-file-export"></i> Xuất Excel
+              </button>
+              <button class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Viết bài mới
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- BẢNG BÀI VIẾT -->
+        <section class="bottom-card" style="margin-top:16px;">
+          <div class="bottom-card-header">
+            <h3>Danh sách bài viết</h3>
+            <span class="sub-text">Sắp xếp theo ngày mới nhất</span>
+          </div>
+
+          <div class="product-table-wrapper">
+            <table class="product-table">
+              <thead>
+              <tr>
+                <th>Tiêu đề</th>
+                <th>Chuyên mục</th>
+                <th>Tác giả</th>
+                <th>Ngày đăng</th>
+                <th>Lượt xem</th>
+                <th>Trạng thái</th>
+                <th style="text-align:right;">Thao tác</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <div class="pt-name">5 lợi ích của mật ong hoa bạc hà đối với sức khỏe</div>
+                  <div class="pt-sub">Mật ong hoa bạc hà – lựa chọn tốt cho hệ tiêu hóa và giấc ngủ.</div>
+                </td>
+                <td>Kiến thức sức khỏe</td>
+                <td>Admin Honey</td>
+                <td>25/11/2025</td>
+                <td>1.245</td>
+                <td><span class="badge badge-success">Đã xuất bản</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Sửa</button>
+                  <span class="dot">•</span>
+                  <button class="link-btn danger">Ẩn</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="pt-name">Cách bảo quản mật ong đúng chuẩn tại nhà</div>
+                  <div class="pt-sub">Hướng dẫn chi tiết để mật ong giữ được hương vị nguyên chất lâu dài.</div>
+                </td>
+                <td>Kiến thức sức khỏe</td>
+                <td>Nhóm 19</td>
+                <td>20/11/2025</td>
+                <td>980</td>
+                <td><span class="badge badge-success">Đã xuất bản</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Sửa</button>
+                  <span class="dot">•</span>
+                  <button class="link-btn danger">Ẩn</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="pt-name">Mẫu nội dung cho bài viết mới về combo quà Tết</div>
+                  <div class="pt-sub">Bản nháp – đang chuẩn bị hình ảnh và nội dung chi tiết.</div>
+                </td>
+                <td>Tin tức Honey Bee</td>
+                <td>Admin Honey</td>
+                <td>—</td>
+                <td>0</td>
+                <td><span class="badge badge-warning">Nháp</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Tiếp tục viết</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="product-pagination">
+            <span class="pp-text">Hiển thị 10 bài viết / trang</span>
+            <div class="pp-pages">
+              <button class="pp-btn disabled">«</button>
+              <button class="pp-btn active">1</button>
+              <button class="pp-btn">2</button>
+              <button class="pp-btn">»</button>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<footer class="admin-footer">
+  © 2025 Honey Bee Admin — Nhóm 19 thực hiện
+</footer>
+
+</body>
+</html>

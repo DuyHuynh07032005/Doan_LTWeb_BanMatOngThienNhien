@@ -998,3 +998,407 @@ body {
 .dark-mode .admin-footer {
     color: #9ca3af;
 }
+/* ===== LỌC & TÌM KIẾM – SẢN PHẨM ===== */
+
+.product-filters {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 4px;
+    flex-wrap: wrap;
+}
+
+.pf-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+}
+
+.pf-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 190px;
+    font-size: 13px;
+    color: #8b6b54;
+}
+
+.pf-item label {
+    font-weight: 600;
+}
+
+.pf-item select,
+.pf-item input {
+    border-radius: 999px;
+    border: 1px solid #f1e3c5;
+    padding: 8px 14px;
+    font-size: 14px;
+    background: #fffdf5;
+    outline: none;
+    transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.pf-item select:focus,
+.pf-item input:focus {
+    border-color: #f7b500;
+    box-shadow: 0 0 0 2px rgba(247,181,0,0.25);
+}
+
+/* ô search có icon */
+.pf-search-wrap {
+    min-width: 260px;
+}
+
+.pf-search {
+    position: relative;
+}
+
+.pf-search input {
+    width: 100%;
+    padding-right: 34px;
+}
+
+.pf-search i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #c79a45;
+}
+
+/* nút bên phải */
+.pf-right {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-ghost {
+    border-radius: 999px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-primary {
+    background: #f7b500;
+    color: #5a3d2b;
+    box-shadow: 0 8px 20px rgba(247,181,0,0.35);
+}
+
+.btn-ghost {
+    background: #fff7e0;
+    color: #5a3d2b;
+    border: 1px solid #f1e3c5;
+}
+
+/* responsive nhỏ */
+@media (max-width: 960px) {
+    .product-filters {
+        align-items: stretch;
+    }
+    .pf-right {
+        margin-left: 0;
+    }
+}
+/* ===== BẢNG SẢN PHẨM – FIX LAYOUT ===== */
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.product-table thead {
+    background: #fff3d3;
+}
+
+.product-table th,
+.product-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #f1e3c5;
+    vertical-align: middle;
+}
+
+.product-table th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #a18463;
+}
+
+/* ô chứa ảnh + tên sản phẩm */
+.pt-product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* THUMBNAIL SẢN PHẨM – GIỚI HẠN KÍCH THƯỚC */
+.pt-thumb {
+    width: 70px;      /* chỉnh 60–80 tuỳ thích */
+    height: 70px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+/* thông tin chữ bên cạnh ảnh */
+.pt-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pt-name {
+    font-weight: 600;
+    color: #5a3d2b;
+}
+
+.pt-sub {
+    font-size: 12px;
+    color: #a18463;
+}
+
+/* cột thao tác */
+.pt-actions {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: #f39b06;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.link-btn.danger {
+    color: #e0533d;
+}
+
+.dot {
+    margin: 0 4px;
+    color: #c7a777;
+}
+/* FIX ẢNH SẢN PHẨM QUÁ TO */
+.product-table img,
+.pt-product img,
+.pt-thumb {
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: cover !important;
+    border-radius: 12px;
+    display: block;
+}
+
+
+/* ===== PAGINATION ===== */
+
+.product-pagination {
+    margin-top: 18px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #8b6b54;
+}
+
+.pp-text {
+    font-size: 13px;
+    color: #a18463;
+}
+
+.pp-pages {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pp-btn {
+    min-width: 34px;
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 50%;
+    border: none;
+    background: #fff7e0;
+    color: #5a3d2b;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* hiệu ứng hover */
+    transition: 0.15s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+}
+
+.pp-btn:hover {
+    background: #ffe8b3;
+}
+
+.pp-btn.active {
+    background: #f7b500;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(247,181,0,0.35);
+}
+
+.pp-btn.disabled {
+    opacity: 0.4;
+    cursor: default;
+    box-shadow: none;
+}
+/* ===== SETTINGS FORM ===== */
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 12px 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: #8b6b54;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-group input,
+.form-group select {
+    border-radius: 999px;
+    border: 1px solid #f1e3c5;
+    padding: 8px 14px;
+    font-size: 14px;
+    background: #fffdf5;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #f7b500;
+    box-shadow: 0 0 0 2px rgba(247,181,0,0.25);
+}
+
+.form-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* ===== SETTINGS LAYOUT ===== */
+
+.settings-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 4px;
+}
+
+.settings-column {
+    flex: 1 1 260px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.settings-title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #5a3d2b;
+}
+
+/* ===== TOGGLE SWITCH ===== */
+
+.settings-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: #fff7e0;
+    border: 1px solid #f1e3c5;
+    cursor: pointer;
+}
+
+.settings-toggle input {
+    display: none;
+}
+
+.toggle-slider {
+    width: 38px;
+    height: 20px;
+    border-radius: 999px;
+    background: #d7c3a1;
+    position: relative;
+    flex-shrink: 0;
+    transition: background .15s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform .15s ease;
+}
+
+/* khi checked */
+.settings-toggle input:checked + .toggle-slider {
+    background: #f7b500;
+}
+
+.settings-toggle input:checked + .toggle-slider::before {
+    transform: translateX(18px);
+}
+
+.toggle-text span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #5a3d2b;
+}
+
+.toggle-text small {
+    display: block;
+    font-size: 11px;
+    color: #a18463;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .settings-flex {
+        flex-direction: column;
+    }
+}

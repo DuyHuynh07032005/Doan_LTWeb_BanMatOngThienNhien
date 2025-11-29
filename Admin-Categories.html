@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Honey Bee | Admin Danh mục</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Admin.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<input type="checkbox" id="darkModeToggle" hidden>
+
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="honeylogo-circl">
+        <img src="logo-honeybee.png" alt="Honey Bee Logo">
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Honey Bee</span>
+        <span class="brand-role">Mật ong nguyên chất</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="Admin-Dashboard.html" class="nav-item" data-page="dashboard">
+        <i class="fa-solid fa-gauge"></i> Dashboard
+      </a>
+      <a href="Admin-Products.html" class="nav-item" data-page="products">
+        <i class="fa-solid fa-box"></i> Sản phẩm
+      </a>
+      <a href="Admin-Categories.html" class="nav-item active" data-page="categories">
+        <i class="fa-solid fa-layer-group"></i> Danh mục
+      </a>
+      <a href="Admin-Orders.html" class="nav-item" data-page="orders">
+        <i class="fa-solid fa-cart-shopping"></i> Đơn hàng
+      </a>
+      <a href="Admin-Customers.html" class="nav-item" data-page="customers">
+        <i class="fa-solid fa-users"></i> Khách hàng
+      </a>
+      <a href="Admin-Posts.html" class="nav-item" data-page="posts">
+        <i class="fa-solid fa-newspaper"></i> Bài viết
+      </a>
+      <a href="#" class="nav-item" data-page="banner">
+        <i class="fa-solid fa-image"></i> Banner
+      </a>
+      <a href="#" class="nav-item" data-page="analytics">
+        <i class="fa-solid fa-chart-column"></i> Thống kê
+      </a>
+      <a href="#" class="nav-item" data-page="reviews">
+        <i class="fa-solid fa-star"></i> Đánh giá
+      </a>
+      <a href="#" class="nav-item" data-page="contacts">
+        <i class="fa-solid fa-envelope"></i> Liên hệ
+      </a>
+      <a href="Admin-Setting.html" class="nav-item" data-page="settings">
+        <i class="fa-solid fa-gear"></i> Cài đặt
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="page-title">Danh mục</h1>
+      </div>
+
+      <div class="topbar-center">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Tìm nhanh danh mục...">
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="icon-btn">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <button class="icon-btn">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+
+        <label for="darkModeToggle" class="theme-toggle">
+          <span class="slider"></span>
+        </label>
+
+        <div class="admin-user">
+          <img src="assets/img/Admin.png" alt="Admin" class="avatar">
+          <div class="admin-info">
+            <span class="admin-name">Admin Honey</span>
+            <span class="admin-role">Quản trị viên</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="content">
+
+      <section id="page-categories" class="page-section active">
+
+        <!-- Cards thống kê -->
+        <section class="cards-row">
+          <article class="stat-card stat-1">
+            <div class="stat-header">
+              <h2>Tổng danh mục</h2>
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <p class="stat-value">12</p>
+            <p class="stat-sub">Tất cả danh mục sản phẩm</p>
+          </article>
+
+          <article class="stat-card stat-2">
+            <div class="stat-header">
+              <h2>Đang hiển thị</h2>
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <p class="stat-value">10</p>
+            <p class="stat-sub">Khách hàng đang thấy trên shop</p>
+          </article>
+
+          <article class="stat-card stat-3">
+            <div class="stat-header">
+              <h2>Đã ẩn</h2>
+              <i class="fa-solid fa-eye-slash"></i>
+            </div>
+            <p class="stat-value">2</p>
+            <p class="stat-sub">Danh mục tạm thời không hiển thị</p>
+          </article>
+        </section>
+
+        <!-- Lọc & tìm kiếm -->
+        <section class="bottom-card" style="margin-top:16px;">
+          <div class="bottom-card-header">
+            <h3>Lọc &amp; tìm kiếm</h3>
+            <span class="sub-text">Quản lý nhóm danh mục sản phẩm</span>
+          </div>
+
+          <div class="product-filters">
+            <div class="pf-left">
+              <div class="pf-item">
+                <label>Loại danh mục</label>
+                <select>
+                  <option>Tất cả</option>
+                  <option>Danh mục cha</option>
+                  <option>Danh mục con</option>
+                </select>
+              </div>
+
+              <div class="pf-item">
+                <label>Trạng thái</label>
+                <select>
+                  <option>Tất cả</option>
+                  <option>Đang hiển thị</option>
+                  <option>Đã ẩn</option>
+                </select>
+              </div>
+
+              <div class="pf-item pf-search-wrap">
+                <label>Tìm kiếm</label>
+                <div class="pf-search">
+                  <input type="text" placeholder="Tên / slug danh mục...">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="pf-right">
+              <button class="btn-ghost">
+                <i class="fa-solid fa-file-export"></i> Xuất Excel
+              </button>
+              <button class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Thêm danh mục
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bảng danh mục -->
+        <section class="bottom-card" style="margin-top:16px;">
+          <div class="bottom-card-header">
+            <h3>Danh sách danh mục</h3>
+            <span class="sub-text">Hiện 1–10 / 12 danh mục</span>
+          </div>
+
+          <div class="product-table-wrapper">
+            <table class="product-table">
+              <thead>
+              <tr>
+                <th>Mã DM</th>
+                <th>Tên danh mục</th>
+                <th>Danh mục cha</th>
+                <th>Số sản phẩm</th>
+                <th>Trạng thái</th>
+                <th style="text-align:right;">Thao tác</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>CAT01</td>
+                <td>
+                  <div class="pt-name">Mật ong hoa bạc hà</div>
+                  <div class="pt-sub">Slug: mat-ong-hoa-bac-ha</div>
+                </td>
+                <td>– (Danh mục cha)</td>
+                <td>24</td>
+                <td><span class="badge badge-success">Đang hiển thị</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Sửa</button>
+                  <span class="dot">•</span>
+                  <button class="link-btn danger">Ẩn</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>CAT02</td>
+                <td>
+                  <div class="pt-name">Mật ong rừng</div>
+                  <div class="pt-sub">Slug: mat-ong-rung</div>
+                </td>
+                <td>– (Danh mục cha)</td>
+                <td>18</td>
+                <td><span class="badge badge-success">Đang hiển thị</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Sửa</button>
+                  <span class="dot">•</span>
+                  <button class="link-btn danger">Ẩn</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>CAT03</td>
+                <td>
+                  <div class="pt-name">Combo quà tặng</div>
+                  <div class="pt-sub">Slug: combo-qua-tang</div>
+                </td>
+                <td>– (Danh mục cha)</td>
+                <td>7</td>
+                <td><span class="badge badge-warning">Đang hiển thị</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Sửa</button>
+                  <span class="dot">•</span>
+                  <button class="link-btn danger">Ẩn</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>CAT04</td>
+                <td>
+                  <div class="pt-name">Mật ong hoa café</div>
+                  <div class="pt-sub">Slug: mat-ong-hoa-cafe</div>
+                </td>
+                <td>Mật ong hoa bạc hà</td>
+                <td>6</td>
+                <td><span class="badge badge-danger">Đã ẩn</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Sửa</button>
+                  <span class="dot">•</span>
+                  <button class="link-btn">Hiển thị lại</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="product-pagination">
+            <span class="pp-text">Hiển thị 10 danh mục / trang</span>
+            <div class="pp-pages">
+              <button class="pp-btn disabled">«</button>
+              <button class="pp-btn active">1</button>
+              <button class="pp-btn">2</button>
+              <button class="pp-btn">»</button>
+            </div>
+          </div>
+        </section>
+
+      </section><!-- /page-categories -->
+
+    </main>
+  </div>
+</div>
+
+<footer class="admin-footer">
+  © 2025 Honey Bee Admin — Nhóm 19 thực hiện
+</footer>
+
+</body>
+</html>

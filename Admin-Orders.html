@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Honey Bee | Admin Đơn hàng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Admin.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<input type="checkbox" id="darkModeToggle" hidden>
+
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="honeylogo-circl">
+        <img src="logo-honeybee.png" alt="Honey Bee Logo">
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Honey Bee</span>
+        <span class="brand-role">Mật ong nguyên chất</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="Admin-Dashboard.html" class="nav-item" data-page="dashboard">
+        <i class="fa-solid fa-gauge"></i> Dashboard
+      </a>
+      <a href="Admin-Products.html" class="nav-item" data-page="products">
+        <i class="fa-solid fa-box"></i> Sản phẩm
+      </a>
+      <a href="Admin-Categories.html" class="nav-item" data-page="categories">
+        <i class="fa-solid fa-layer-group"></i> Danh mục
+      </a>
+      <a href="Admin-Orders.html" class="nav-item active" data-page="orders">
+        <i class="fa-solid fa-cart-shopping"></i> Đơn hàng
+      </a>
+      <a href="Admin-Customers.html" class="nav-item" data-page="customers">
+        <i class="fa-solid fa-users"></i> Khách hàng
+      </a>
+      <a href="Admin-Posts.html" class="nav-item" data-page="posts">
+        <i class="fa-solid fa-newspaper"></i> Bài viết
+      </a>
+      <a href="#" class="nav-item" data-page="banner">
+        <i class="fa-solid fa-image"></i> Banner
+      </a>
+      <a href="#" class="nav-item" data-page="analytics">
+        <i class="fa-solid fa-chart-column"></i> Thống kê
+      </a>
+      <a href="#" class="nav-item" data-page="reviews">
+        <i class="fa-solid fa-star"></i> Đánh giá
+      </a>
+      <a href="#" class="nav-item" data-page="contacts">
+        <i class="fa-solid fa-envelope"></i> Liên hệ
+      </a>
+      <a href="Admin-Setting.html" class="nav-item" data-page="settings">
+        <i class="fa-solid fa-gear"></i> Cài đặt
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="page-title">Đơn hàng</h1>
+      </div>
+
+      <div class="topbar-center">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Tìm nhanh đơn hàng...">
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="icon-btn">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <button class="icon-btn">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+
+        <label for="darkModeToggle" class="theme-toggle">
+          <span class="slider"></span>
+        </label>
+
+        <div class="admin-user">
+          <img src="assets/img/Admin.png" alt="Admin" class="avatar">
+          <div class="admin-info">
+            <span class="admin-name">Admin Honey</span>
+            <span class="admin-role">Quản trị viên</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="content">
+
+      <section id="page-orders" class="page-section active">
+
+        <!-- CARDS THỐNG KÊ -->
+        <section class="cards-row">
+          <article class="stat-card stat-1">
+            <div class="stat-header">
+              <h2>Tổng đơn hàng</h2>
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+            <p class="stat-value">1.245</p>
+            <p class="stat-sub">Từ đầu tháng đến nay</p>
+          </article>
+
+          <article class="stat-card stat-2">
+            <div class="stat-header">
+              <h2>Đơn đang xử lý</h2>
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <p class="stat-value">35</p>
+            <p class="stat-sub">Chờ xác nhận / đang giao</p>
+          </article>
+
+          <article class="stat-card stat-3">
+            <div class="stat-header">
+              <h2>Đơn đã hủy</h2>
+              <i class="fa-solid fa-ban"></i>
+            </div>
+            <p class="stat-value">12</p>
+            <p class="stat-sub">Trong 30 ngày gần đây</p>
+          </article>
+        </section>
+
+        <!-- LỌC & TÌM KIẾM -->
+        <section class="bottom-card" style="margin-top:16px;">
+          <div class="bottom-card-header">
+            <h3>Lọc &amp; tìm kiếm</h3>
+            <span class="sub-text">Quản lý đơn đặt hàng Honey Bee</span>
+          </div>
+
+          <div class="product-filters">
+            <div class="pf-left">
+
+              <div class="pf-item">
+                <label>Từ ngày</label>
+                <input type="date">
+              </div>
+
+              <div class="pf-item">
+                <label>Đến ngày</label>
+                <input type="date">
+              </div>
+
+              <div class="pf-item">
+                <label>Trạng thái</label>
+                <select>
+                  <option>Tất cả</option>
+                  <option>Chờ xử lý</option>
+                  <option>Đang giao</option>
+                  <option>Hoàn thành</option>
+                  <option>Đã hủy</option>
+                </select>
+              </div>
+
+              <div class="pf-item">
+                <label>Thanh toán</label>
+                <select>
+                  <option>Tất cả</option>
+                  <option>COD</option>
+                  <option>VNPay</option>
+                  <option>Momo</option>
+                </select>
+              </div>
+
+              <div class="pf-item pf-search-wrap">
+                <label>Tìm kiếm</label>
+                <div class="pf-search">
+                  <input type="text" placeholder="Mã đơn / tên khách hàng...">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="pf-right">
+              <button class="btn-ghost">
+                <i class="fa-solid fa-file-export"></i> Xuất Excel
+              </button>
+              <button class="btn-primary">
+                <i class="fa-solid fa-arrow-rotate-right"></i> Làm mới
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- BẢNG ĐƠN HÀNG -->
+        <section class="bottom-card" style="margin-top:16px;">
+          <div class="bottom-card-header">
+            <h3>Danh sách đơn hàng</h3>
+            <span class="sub-text">Trong 24 giờ gần đây</span>
+          </div>
+
+          <div class="product-table-wrapper">
+            <table class="product-table">
+              <thead>
+              <tr>
+                <th>Mã đơn</th>
+                <th>Khách hàng</th>
+                <th>Ngày đặt</th>
+                <th>Thanh toán</th>
+                <th>Tổng tiền</th>
+                <th>Trạng thái</th>
+                <th style="text-align:right;">Thao tác</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>#HB1234</td>
+                <td>
+                  <div class="pt-name">Huỳnh Bảo Duy</div>
+                  <div class="pt-sub">0123 456 789 • TP.HCM</div>
+                </td>
+                <td>28/11/2025 • 09:15</td>
+                <td><span class="badge">VNPay</span></td>
+                <td>450.000₫</td>
+                <td><span class="badge badge-warning">Chờ xử lý</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Xem chi tiết</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#HB1235</td>
+                <td>
+                  <div class="pt-name">Võ Thành Giỏi</div>
+                  <div class="pt-sub">Ship Gò Vấp • 0987 654 321</div>
+                </td>
+                <td>28/11/2025 • 08:42</td>
+                <td><span class="badge">COD</span></td>
+                <td>720.000₫</td>
+                <td><span class="badge badge-success">Đang giao</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Xem chi tiết</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#HB1236</td>
+                <td>
+                  <div class="pt-name">Huỳnh Tuấn Anh</div>
+                  <div class="pt-sub">Giao thành công • Q.1</div>
+                </td>
+                <td>27/11/2025 • 21:10</td>
+                <td><span class="badge">Momo</span></td>
+                <td>310.000₫</td>
+                <td><span class="badge badge-success">Hoàn thành</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Xem chi tiết</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#HB1237</td>
+                <td>
+                  <div class="pt-name">Nguyễn Thị A</div>
+                  <div class="pt-sub">Khách hủy đơn</div>
+                </td>
+                <td>27/11/2025 • 16:05</td>
+                <td><span class="badge">COD</span></td>
+                <td>260.000₫</td>
+                <td><span class="badge badge-danger">Đã hủy</span></td>
+                <td class="pt-actions">
+                  <button class="link-btn">Xem chi tiết</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="product-pagination">
+            <span class="pp-text">Hiển thị 20 đơn hàng / trang</span>
+            <div class="pp-pages">
+              <button class="pp-btn disabled">«</button>
+              <button class="pp-btn active">1</button>
+              <button class="pp-btn">2</button>
+              <button class="pp-btn">3</button>
+              <button class="pp-btn">»</button>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<footer class="admin-footer">
+  © 2025 Honey Bee Admin — Nhóm 19 thực hiện
+</footer>
+
+</body>
+</html>
