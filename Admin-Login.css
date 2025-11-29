@@ -108,3 +108,15 @@ input:focus {
     font-size: 14px;
     text-align: center;
 }
+input {
+    width: 100%;
+    box-sizing: border-box;   /* RẤT QUAN TRỌNG */
+    border-radius: 999px;
+    border: 1.4px solid #e7d7b8;
+    padding: 12px 18px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    background: #fffdf5;
+    outline: none;
+    transition: 0.2s ease;
+}
