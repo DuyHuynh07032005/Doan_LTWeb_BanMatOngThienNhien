@@ -64,7 +64,7 @@
     </nav>
 
     <div class="sidebar-footer">
-      <a href="#" class="nav-item logout">
+      <a href="#" class="nav-item logout" id="btnAdminLogout">
         <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
       </a>
     </div>
@@ -300,6 +300,16 @@
 <footer class="admin-footer">
   © 2025 Honey Bee Admin — Nhóm 19 thực hiện
 </footer>
-
+<script>
+  const btnLogout = document.getElementById("btnAdminLogout");
+  if (btnLogout) {
+    btnLogout.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("hb_admin_logged_in");
+      localStorage.removeItem("hb_admin_name");
+      window.location.href = "Admin-Login.html";
+    });
+  }
+</script>
 </body>
 </html>

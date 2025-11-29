@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <title>Honey Bee | Đăng nhập Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Admin-Login.css">
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+  <div class="login-card">
+
+    <div class="login-logo">
+      <img src="logo-honeybee.png" alt="Honey Bee">
+      <h1>Honey Bee Admin</h1>
+      <p class="desc">Đăng nhập khu vực quản trị</p>
+    </div>
+
+    <form id="adminLoginForm">
+      <label>Email đăng nhập</label>
+      <input type="email" id="adminEmail" required placeholder="admin@honeybee.vn">
+
+      <label>Mật khẩu</label>
+      <input type="password" id="adminPassword" required placeholder="••••••••">
+
+      <button type="submit" class="btn-login">Đăng nhập</button>
+
+      <p id="loginError" class="error" style="display:none;">
+        Sai email / mật khẩu!
+      </p>
+    </form>
+
+  </div>
+
+</div>
+
+<script src="Admin-Login.js"></script>
+</body>
+</html>

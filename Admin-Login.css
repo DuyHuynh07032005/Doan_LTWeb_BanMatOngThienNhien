@@ -1,0 +1,110 @@
+/* ======================
+   Honey Bee Admin Login
+   ====================== */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ffe8b3, #f7d58a, #ffe8c5);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: #fffdf7;
+    width: 450px;               /* TO HƠN */
+    padding: 40px 36px;         /* NHIỀU SPACE HƠN */
+    border-radius: 32px;        /* BO GÓC MỊN */
+    box-shadow: 0 20px 45px rgba(0,0,0,0.20);   /* ĐỔ BÓNG MẠNH */
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-logo img {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.login-logo h1 {
+    margin: 5px 0 4px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5a3d2b;
+}
+
+.login-logo .desc {
+    margin: 0 0 25px;
+    font-size: 14px;
+    color: #a88b64;
+}
+
+form {
+    text-align: left;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b4b32;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    border-radius: 999px;             /* FULL PILL */
+    border: 1.4px solid #e7d7b8;
+    padding: 12px 18px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    background: #fffdf5;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border-color: #f7b500;
+    box-shadow: 0 0 0 3px rgba(247,181,0,0.25);
+}
+
+.btn-login {
+    width: 100%;
+    background: #f7b500;
+    color: white;
+    border: none;
+    padding: 14px 0;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 18px rgba(247,181,0,0.45);
+}
+
+.btn-login:hover {
+    background: #e0a100;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(247,181,0,0.6);
+}
+
+.error {
+    margin-top: 12px;
+    color: #d9534f;
+    font-size: 14px;
+    text-align: center;
+}
