@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function setupSlideshow() {
         const slideContainer = document.getElementById('slide-container');
         const dotsContainer = document.getElementById('dots-container');
-
         if (!slideContainer || !dotsContainer || bannerUrls.length === 0) return;
 
         // 1. TẠO CÁC SLIDE VÀ NÚT ĐIỀU HƯỚNG DỰA TRÊN DANH SÁCH 4 ẢNH

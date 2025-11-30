@@ -1,3 +1,4 @@
+// PostDetail.js (Chỉ giữ lại logic xử lý form bình luận)
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('comment-form');
